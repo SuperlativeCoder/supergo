@@ -5,7 +5,7 @@
   "author": "superbiger <superbiger@qq.com>",
   "description": "A simple helpful robot for your Company",
   "scripts": {
-    "start": "HUBOT_SLACK_TOKEN= ./bin/hubot --adapter slack"
+    "start": "HUBOT_SLACK_TOKEN=xoxb-319121331537-sAbIkxdikxJJIuV7g75s9wfi ./bin/hubot --adapter slack"
   },
   "dependencies": {
     "hubot": "^2.19.0",

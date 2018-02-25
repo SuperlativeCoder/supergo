@@ -9,7 +9,6 @@
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 module.exports = (robot) ->
-
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
@@ -20,21 +19,21 @@ module.exports = (robot) ->
   #   else
   #     res.reply "Opening #{doorType} doors"
   #
-  # robot.hear /I like pie/i, (res) ->
-  #   res.emote "makes a freshly baked pie"
+  robot.hear /I like pie/i, (res) ->
+    res.emote "makes a freshly baked pie"
   #
   # lulz = ['lol', 'rofl', 'lmao']
   #
   # robot.respond /lulz/i, (res) ->
   #   res.send res.random lulz
   #
-  # robot.topic (res) ->
-  #   res.send "#{res.message.text}? That's a Paddlin'"
+  robot.topic (res) ->
+    res.send "#{res.message.text}? That's a Paddlin'"
   #
   #
   # enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
   # leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
-  #
+  
   # robot.enter (res) ->
   #   res.send res.random enterReplies
   # robot.leave (res) ->
@@ -74,12 +73,13 @@ module.exports = (robot) ->
   #     res.send "Not annoying you right now, am I?"
   #
   #
-  # robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
-  #   room   = req.params.room
-  #   data   = JSON.parse req.body.payload
-  #   secret = data.secret
-  #
-  #   robot.messageRoom room, "I have a secret: #{secret}"
+  robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
+    room   = req.params.room
+    console.log(req.body.payload)
+    data   = JSON.parse req.body
+    secret = data.secret
+  
+    robot.messageRoom room, "I have a secret: #{secret}"
   #
   #   res.send 'OK'
   #
