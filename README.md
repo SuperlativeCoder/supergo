@@ -1,6 +1,9 @@
 # supergo
 a robut project
 
+## WARNING
+**Token is any more useless where in package.json,Please use your own**
+
 ## MAPPING
 ```js
 |-- base/handlers           // shell/cmd 脚本命令文件
