@@ -14,7 +14,7 @@ a robut project
     |-- interval            // 定时器
     |-- service             // 服务
     |-- listener-example    // 路由监听
-    |-- main.js             // 执行入口
+    |-- supergo.js             // 执行入口
 ```
 
 ## RUN
