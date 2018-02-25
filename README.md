@@ -2,7 +2,7 @@
 a robut project
 
 ## WARNING
-**Token is any more useless where in package.json,Please use your own**
+**Token is any more useless where in package.json,Please use your own 🤪**
 
 ## MAPPING
 ```js
