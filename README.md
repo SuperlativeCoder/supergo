@@ -11,7 +11,7 @@ a robut project
 |-- scripts                 // 入口
 |-- src                 
     |-- base                // 封装
-    |-- event               // 事件
+    |-- events              // 事件
     |-- handler             // 执行入口
     |-- help                // 帮助
     |-- interval            // 定时器
