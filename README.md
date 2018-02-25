@@ -8,7 +8,7 @@ a robut project
 ```js
 |-- base/handlers           // shell/cmd 脚本命令文件
 |-- docker                  // Dockerfile
-|-- scripts                 // 入口
+|-- scripts                 // 注册入口
 |-- src                 
     |-- base                // 封装
     |-- events              // 事件
@@ -17,7 +17,6 @@ a robut project
     |-- interval            // 定时器
     |-- service             // 服务
     |-- listener-example    // 路由监听
-    |-- supergo.js          // 执行入口
 ```
 
 ## RUN
