@@ -24,7 +24,7 @@ a robut project
 
 ## RUN
 ```shell
-    npm run start
+    npm run dev
 ```
 **or**
 ```
