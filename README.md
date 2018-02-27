@@ -7,7 +7,6 @@ a robut project
 ## MAPPING
 ```js
 |-- base/handlers           // shell/cmd 脚本命令文件
-|-- docker                  // Dockerfile
 |-- scripts                 // 注册入口
 |-- src       
     |-- scripts             // Hubot
