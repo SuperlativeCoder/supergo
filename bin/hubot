@@ -3,7 +3,20 @@
 set -e
 
 npm install
+
+# hubot
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 export PORT=8081
+
+# jenkins
+export HUBOT_JENKINS_URL=""
+export HUBOT_JENKINS_AUTH=""
+
+# administrator
+export HUBOT_ADMIN_PORT=8082
+
+export HUBOT_ADMIN_PG_URL=""
+export HUBOT_ADMIN_PG_USERNAME=""
+export HUBOT_ADMIN_PG_PASSWORD=""
 
 exec node_modules/.bin/hubot --name "supergo" "$@"
