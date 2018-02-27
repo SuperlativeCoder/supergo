@@ -2,6 +2,6 @@
 
 echo Build image
 
-echo Remove old container
+echo Remove old container & image
 
 echo Run

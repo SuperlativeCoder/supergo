@@ -4,9 +4,6 @@
   "private": true,
   "author": "superbiger <superbiger@qq.com>",
   "description": "A simple helpful robot for your Company",
-  "scripts": {
-    "start": "HUBOT_SLACK_TOKEN= ./bin/hubot --adapter slack"
-  },
   "dependencies": {
     "coffee-script": "^1.12.7",
     "hubot": "^2.19.0",

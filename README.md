@@ -29,5 +29,6 @@ a robut project
 ```
 **or**
 ```
-    docker build -t supebiger/supergo .
+    docker build -f Dockerfile --build-arg HUBOT_SLACK_TOKEN_ARG=${YOUR HUBOT_SLACK_TOKEN} -t superbiger/supergo:0.0.1 .
+    docker run --name supergo -p 8081:8081 superbiger/supergo:0.0.1
 ```
