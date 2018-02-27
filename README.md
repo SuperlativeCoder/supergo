@@ -6,7 +6,7 @@ a robut project
 
 ## MAPPING
 ```js
-|-- base/handlers           // shell/cmd 脚本命令文件
+|-- base/handlers           // shellcmd 脚本命令文件
 |-- scripts                 // 注册入口
 |-- src       
     |-- scripts             // Hubot
