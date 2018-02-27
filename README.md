@@ -27,7 +27,7 @@ a robut project
 ```shell
     npm run start
 ```
-or
+**or**
 ```
-    docker build ./docker
+    docker build -t supebiger/supergo .
 ```
