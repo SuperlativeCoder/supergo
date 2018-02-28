@@ -1,4 +1,8 @@
-# supergo
+<div style="align: center">
+<img src="./logo.png"/>
+</div>
+
+## DESCRIPTION
 a robut project for slack
 
 ## FEATURES
