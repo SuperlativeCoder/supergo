@@ -3,7 +3,7 @@
 </p>
 
 ## Description
-a robut project for slack
+hubot for slack
 
 ## Features
 
