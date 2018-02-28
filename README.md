@@ -1,16 +1,16 @@
-<div style="align: center">
+<p align="center">
 <img src="./logo.png"/>
-</div>
+</p>
 
-## DESCRIPTION
+## Description
 a robut project for slack
 
-## FEATURES
+## Features
 
-## WARNING
+## Warning
 **Token is any more useless where in package.json,Please use your own 🤪**
 
-## MAPPING
+## Mapping
 ```js
 |-- base/handlers           // shellcmd 脚本命令文件
 |-- scripts                 // 注册入口
@@ -28,7 +28,7 @@ a robut project for slack
     |-- ui                  // 管理后台 UI
 ```
 
-## RUN
+## Run
 ```shell
     npm run dev
 ```
