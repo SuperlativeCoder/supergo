@@ -1,5 +1,7 @@
 # supergo
-a robut project
+a robut project for slack
+
+## FEATURES
 
 ## WARNING
 **Token is any more useless where in package.json,Please use your own 🤪**
