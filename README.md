@@ -18,7 +18,6 @@ hubot for slack
     |-- config              // 配置
     |-- scripts             // Hubot
         |-- base                // 封装
-        |-- events              // 事件
         |-- handler             // 执行入口
         |-- help                // 帮助
         |-- interval            // 定时器
