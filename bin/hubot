@@ -9,8 +9,8 @@ export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 export PORT=8081
 
 # jenkins
-export HUBOT_JENKINS_URL="http://10.0.73.95:8080/"
-export HUBOT_JENKINS_AUTH="jenkins:PiaJCVdEsYGBqLwwO0GI"
+export HUBOT_JENKINS_URL=""
+export HUBOT_JENKINS_AUTH=""
 
 # administrator
 export HUBOT_ADMIN_PORT=8082
