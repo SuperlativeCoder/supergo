@@ -15,6 +15,7 @@ hubot for slack
 |-- base/handlers           // shellcmd 脚本命令文件
 |-- scripts                 // 注册入口
 |-- src       
+    |-- config              // 配置
     |-- scripts             // Hubot
         |-- base                // 封装
         |-- events              // 事件
@@ -24,8 +25,8 @@ hubot for slack
         |-- service             // 服务
         |-- listener            // 路由监听
     |-- server              // 管理后台
-    |-- superkit            // Hubot-Server Kit
-    |-- ui                  // 管理后台 UI
+    |-- include             // Hubot-Server Kit
+    |-- view                // 管理后台 UI
 ```
 
 ## Run
