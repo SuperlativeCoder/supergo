@@ -5,10 +5,17 @@
   "author": "superbiger <superbiger@qq.com>",
   "description": "A simple helpful robot for your Company",
   "keywords": [
-    "hubot", "vue", "koa", "typescript"
+    "hubot",
+    "vue",
+    "koa",
+    "typescript"
   ],
   "scripts": {
-    "dev": "HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN} ./bin/hubot --adapter slack"
+    "dev": "HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN} ./config/bin/hubot --adapter slack",
+    "hubot:start": "",
+    "hubot:test": "",
+    "serve:start": "",
+    "serve:test": ""
   },
   "dependencies": {
     "axios": "^0.18.0",
