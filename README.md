@@ -14,7 +14,7 @@ hubot for slack
 ```js
 |-- base/handlers           // shellcmd 脚本命令文件
 |-- config                  // 配置
-|-- docks                   // 文档
+|-- docs                    // 文档
 |-- scripts                 // 注册入口
 |-- public
 |-- src       
