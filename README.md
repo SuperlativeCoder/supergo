@@ -13,27 +13,24 @@ hubot for slack
 ## Mapping
 ```js
 |-- base/handlers           // shellcmd 脚本命令文件
+|-- config                  // 配置
+|-- docks                   // 文档
 |-- scripts                 // 注册入口
+|-- public
 |-- src       
-    |-- config              // 配置
+    |-- include             // Hubot-Server Kit
+    |-- locale              // 国际化
     |-- scripts             // Hubot
         |-- base                // 封装
         |-- handler             // 执行入口
-        |-- help                // 帮助
         |-- interval            // 定时器
-        |-- service             // 服务
         |-- listener            // 路由监听
+        |-- service             // 服务
     |-- server              // 管理后台
-    |-- include             // Hubot-Server Kit
     |-- view                // 管理后台 UI
 ```
 
-## Run
+## Develop
 ```shell
     npm run dev
-```
-**or**
-```
-    docker build -f Dockerfile --build-arg HUBOT_SLACK_TOKEN_ARG=${YOUR HUBOT_SLACK_TOKEN} -t superbiger/supergo:0.0.1 .
-    docker run --name supergo -p 8081:8081 -d superbiger/supergo:0.0.1
 ```
