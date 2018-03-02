@@ -1,0 +1,4 @@
+build/*.js
+config/*.js
+script/*.js
+script/*.coffee
