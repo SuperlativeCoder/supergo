@@ -7,19 +7,19 @@
   "keywords": [
     "hubot",
     "vue",
-    "koa",
+    "koa2",
     "typescript"
   ],
   "scripts": {
-    "dev": "super-service dev", 
-    "build": "super-service build",
-    "test": "super-service test",
-    "hubot:start": "super-service hubot:start",
-    "hubot:build": "super-service hubot:build",
-    "hubot:test": "super-service hubot:test",
-    "serve:start": "super-service serve:start",
-    "serve:build": "super-service serve:build",
-    "serve:test": "super-service serve:test"
+    "dev": "./config/bin/super-service dev", 
+    "build": "./config/bin/super-service build",
+    "test": "./config/bin/super-service test",
+    "hubot:start": "./config/bin/super-service hubot:start",
+    "hubot:build": "./config/bin/super-service hubot:build",
+    "hubot:test": "./config/bin/super-service hubot:test",
+    "serve:start": "./config/bin/super-service serve:start",
+    "serve:build": "./config/bin/super-service serve:build",
+    "serve:test": "./config/bin/super-service serve:test"
   },
   "dependencies": {
     "axios": "^0.18.0",
