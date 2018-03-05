@@ -20,3 +20,5 @@ export HUBOT_ADMIN_PG_USERNAME=""
 export HUBOT_ADMIN_PG_PASSWORD=""
 
 exec node_modules/.bin/hubot --name "supergo" "$@"
+
+# HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN} ./config/bin/hubot --adapter slack

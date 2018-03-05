@@ -11,11 +11,15 @@
     "typescript"
   ],
   "scripts": {
-    "dev": "HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN} ./config/bin/hubot --adapter slack",
-    "hubot:start": "",
-    "hubot:test": "",
-    "serve:start": "",
-    "serve:test": ""
+    "dev": "super-service dev", 
+    "build": "super-service build",
+    "test": "super-service test",
+    "hubot:start": "super-service hubot:start",
+    "hubot:build": "super-service hubot:build",
+    "hubot:test": "super-service hubot:test",
+    "serve:start": "super-service serve:start",
+    "serve:build": "super-service serve:build",
+    "serve:test": "super-service serve:test"
   },
   "dependencies": {
     "axios": "^0.18.0",
