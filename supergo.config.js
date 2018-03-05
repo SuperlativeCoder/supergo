@@ -1,3 +1,27 @@
 module.exports = {
-  HUBORT_PORT: ""
+  hubot: {
+    dev: {
+
+    },
+    test: {
+
+    },
+    prod: {
+
+    }
+  },
+  client: {
+    build: {
+
+    },
+    dev: {
+
+    },
+    test: {
+
+    },
+    prod: {
+
+    }
+  }
 }
