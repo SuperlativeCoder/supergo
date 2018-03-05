@@ -34,3 +34,6 @@ hubot for slack
 ```shell
     npm run dev
 ```
+
+## Config
+please see the [Documents](./config/README.md)
