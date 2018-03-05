@@ -11,9 +11,9 @@
     "typescript"
   ],
   "scripts": {
-    "dev": "./config/bin/super-service dev", 
-    "build": "./config/bin/super-service build",
-    "test": "./config/bin/super-service test",
+    "client:start": "./config/bin/super-service dev", 
+    "client:build": "./config/bin/super-service build",
+    "client:test": "./config/bin/super-service test",
     "hubot:start": "./config/bin/super-service hubot:start",
     "hubot:build": "./config/bin/super-service hubot:build",
     "hubot:test": "./config/bin/super-service hubot:test",
