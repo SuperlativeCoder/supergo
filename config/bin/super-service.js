@@ -9,6 +9,16 @@ if (!semver.satisfies(process.version, requireVersion)) {
   process.exit(1)
 }
 
-const shelljs = require('shelljs/global')
+const Service = require('../lib/service')
+const service = new Service()
 
+const rawArgv = process.argv.slice(2)
+const args = require('minimist')(rawArgv)
+const command = args._[0]
+console.log(args)
+
+service.run(command, args, rawArgv).catch(err => {
+  error(err)
+  process.exit(1)
+})
  
