@@ -12,6 +12,7 @@ hubot for slack
 
 ## Mapping
 ```js
+|-- assets                  // 项目静态资源
 |-- base/handlers           // shellcmd 脚本命令文件
 |-- config                  // 配置
 |-- docs                    // 文档
@@ -28,6 +29,13 @@ hubot for slack
         |-- service             // 服务
     |-- server              // 管理后台
     |-- view                // 管理后台 UI
+|-- test                    // 测试
+|-- typings                 // *.d.ts
+|-- Dockerfile                    
+|-- external-scripts.json   // hubot 插件注册
+|-- supergo.config.js       // 配置文件
+|-- tsconfig.json           // TS 配置
+|-- tslint.json             // TSlint 配置
 ```
 
 ## Develop
