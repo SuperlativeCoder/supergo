@@ -1,6 +1,8 @@
 module.exports = class Service {
-  constructor () {
-
+  constructor (context, { plugins, pkg, projectOptions, useBuiltIn } = {}) {
+    process.SUPERGO_SERVICE = this
+    this.context = context
+    
   }
 
   run(name, args = {}, rawArgv = []) {
