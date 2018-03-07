@@ -14,6 +14,7 @@ hubot for slack
 ```js
 |-- assets                  // 项目静态资源
 |-- base/handlers           // shellcmd 脚本命令文件
+|-- build                   // 构建/工程执行入口
 |-- config                  // 配置
 |-- docs                    // 文档
 |-- scripts                 // 注册入口
