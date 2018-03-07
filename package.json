@@ -11,13 +11,10 @@
     "typescript"
   ],
   "scripts": {
-    "hubot:start": "./config/bin/super-service hubot --start",
-    "client:start": "./config/bin/super-service client --start",
-    "client:build": "./config/bin/super-service client --build",
-    "client:test": "./config/bin/super-service client --test",
-    "serve:start": "./config/bin/super-service serve --start",
-    "serve:build": "./config/bin/super-service serve --build",
-    "serve:test": "./config/bin/super-service serve --test"
+    "hubot": "node ./build/bin/super-service hubot --start",
+    "serve": "node ./build/bin/super-service serve --start",
+    "build": "node ./build/bin/super-service serve --build",
+    "test": "node ./build/bin/super-service serve --test"
   },
   "dependencies": {
     "axios": "^0.18.0",
