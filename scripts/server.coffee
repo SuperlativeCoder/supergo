@@ -1,5 +1,0 @@
-#
-# server
-#
-module.exports = (robot) ->
-    
