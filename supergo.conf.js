@@ -12,12 +12,12 @@ module.exports = {
       cssSourceMap: false,
       productionSourceMap: true,
       proxyTable: {
-        
+
       }
     },
     build: {
-      index: path.resolve(__dirname, '../dist/index.html'),
-      assetsRoot: path.resolve(__dirname, '../dist'),
+      index: path.resolve(__dirname, './dist/index.html'),
+      assetsRoot: path.resolve(__dirname, './dist'),
       assetsSubDirectory: 'static',
       assetsPublicPath: '/manage/',
       productionSourceMap: false,
