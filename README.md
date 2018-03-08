@@ -40,6 +40,11 @@ hubot for slack
 ```
 
 ## Develop
+**hubot server**
+```shell
+    yarn run hubot
+```
+**development server**
 ```shell
     yarn run dev
 ```
