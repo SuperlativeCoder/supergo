@@ -6,7 +6,7 @@ module.exports = {
     path: '"node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"',
     name: 'supergo',
     port: 8081,
-    hubot_slack_token: '"xoxb-319981722720-X3LbCHOGRTflK549WHtDRSXU"'
+    hubot_slack_token: '""'
   },
   client: {
     start: {
