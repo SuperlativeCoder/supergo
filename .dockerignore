@@ -6,3 +6,5 @@ README.md
 test
 docs
 logs
+.DS_Store*
+yarn-error.log

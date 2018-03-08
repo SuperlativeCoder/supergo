@@ -18,4 +18,4 @@ EXPOSE 8081
 # server port
 EXPOSE 8082
 
-CMD ["/bin/bash", "-c", "HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN} ./bin/hubot --adapter slack"]
+CMD ["/bin/bash", "-c", "npm run hubot && npm run start"]
