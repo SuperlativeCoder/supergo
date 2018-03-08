@@ -6,9 +6,15 @@ const shelljs = require('shelljs')
 const { info, warn, error } = require('../util/logger')
 
 module.exports = (api, options) => {
-  api.registerCommand('hubot', args => {
+  api.registerCommand('hubot', {
+    description: 'start hubot server',
+    usage: 'supergo-service hubot [options]',
+    options: {
+      '--start': `start hubot server`
+    }
+  },args => {
+    info('Starting hubot server...')
     const command = args._[0]
-    // --start
     if (args.start) {
       commandStart(options)         
     }

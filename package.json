@@ -13,8 +13,9 @@
   "scripts": {
     "hubot": "node ./build/bin/super-service hubot --start",
     "serve": "node ./build/bin/super-service serve --start",
-    "build": "node ./build/bin/super-service serve --build",
-    "test": "node ./build/bin/super-service serve --test"
+    "build": "node ./build/bin/super-service build",
+    "test": "node ./build/bin/super-service serve --test",
+    "help": "node ./build/bin/super-service help"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -58,6 +59,8 @@
     "read-pkg": "^3.0.0",
     "semver": "^5.5.0",
     "shelljs": "^0.8.1",
+    "string.prototype.padend": "^3.0.0",
+    "string.prototype.padstart": "^3.0.0",
     "ts-loader": "^4.0.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2",

@@ -17,7 +17,7 @@ module.exports = {
       cssSourceMap: false,
       productionSourceMap: true,
       proxyTable: {
-
+ 
       }
     },
     build: {
