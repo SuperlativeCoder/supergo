@@ -8,26 +8,13 @@ module.exports = {
   },
   client: {
     dev: {
-      port: 8082,
-      autoOpenBrowser: false,
-      assetsSubDirectory: 'static',
-      assetsPublicPath: '/',
-      cssSourceMap: true,
-      productionSourceMap: true,
-      proxyTable: {
-        
-      }
+      env: 'config/dev.env.js'
     },
     start: {
-      port: 8082,
-      autoOpenBrowser: false,
-      assetsSubDirectory: 'static',
-      assetsPublicPath: '/',
-      cssSourceMap: false,
-      productionSourceMap: true,
-      proxyTable: {
- 
-      }
+      env: 'config/prod.env.js'
+    },
+    test: {
+      env: 'config/test.env.js'
     },
     build: {
       index: '"dist/index.html"',
