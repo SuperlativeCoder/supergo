@@ -1,5 +1,8 @@
+const koa = require('koa')
 const chalk = require('chalk')
 const webpack = require('webpack')
+const hotMiddleware = require('koa-webpack')
+const proxyMiddleware = require('http-proxy-middleware')
 const { hasYarn } = require('../util/env')
 const { info, error } = require('../util/logger')
 

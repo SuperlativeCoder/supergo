@@ -29,6 +29,7 @@
     "hubot-slack": "^4.4.0",
     "koa": "^2.5.0",
     "koa-body": "^2.5.0",
+    "koa-compress": "^2.0.0",
     "koa-logger": "^3.1.0",
     "koa-onerror": "^4.0.0",
     "koa-router": "^7.4.0",
@@ -55,6 +56,7 @@
     "chalk": "^2.3.2",
     "http-proxy-middleware": "^0.17.4",
     "joi": "^13.1.2",
+    "koa-webpack": "^3.0.1",
     "minimist": "^1.2.0",
     "mocha": "^5.0.1",
     "path": "^0.12.7",
@@ -68,8 +70,6 @@
     "typescript": "^2.7.2",
     "webpack": "^4.1.0",
     "webpack-chain": "^4.5.0",
-    "webpack-dev-middleware": "^3.0.1",
-    "webpack-hot-middleware": "^2.21.2",
     "webpack-merge": "^4.1.2"
   }
 }
