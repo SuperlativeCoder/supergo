@@ -41,8 +41,12 @@ hubot for slack
 
 ## Develop
 ```shell
-    npm run dev
+    yarn run dev
 ```
 
 ## Config
 please see the [Documents](./config/README.md)
+```
+    // supergo-service help
+    yarn run help
+```
