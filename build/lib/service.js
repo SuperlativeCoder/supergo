@@ -60,7 +60,6 @@ module.exports = class Service {
     const configPath = path.resolve(this.context, 'supergo.config.js')
     if (fs.existsSync(configPath)) {
       try {
-        console.log(configPath)
         fileConfig = require(configPath)
         if (!fileConfig || typeof fileConfig !== 'object') {
           error(
