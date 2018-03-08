@@ -52,6 +52,5 @@ hubot for slack
 ## Config
 please see the [Documents](./config/README.md)
 ```
-    // supergo-service help
     yarn run help
 ```
