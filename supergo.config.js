@@ -9,6 +9,17 @@ module.exports = {
     hubot_slack_token: '""'
   },
   client: {
+    dev: {
+      port: 8082,
+      autoOpenBrowser: false,
+      assetsSubDirectory: 'static',
+      assetsPublicPath: '/',
+      cssSourceMap: false,
+      productionSourceMap: true,
+      proxyTable: {
+ 
+      }
+    },
     start: {
       port: 8082,
       autoOpenBrowser: false,

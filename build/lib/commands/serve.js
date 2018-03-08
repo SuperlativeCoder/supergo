@@ -3,6 +3,7 @@ module.exports = (api, options) => {
     description: 'start server',
     usage: 'supergo-service serve [options]',
     options: {
+      '--dev'  : `start development server`,
       '--start': `start server`
     }
   }, args => {
