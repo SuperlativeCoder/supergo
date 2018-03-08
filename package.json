@@ -11,10 +11,11 @@
     "typescript"
   ],
   "scripts": {
-    "hubot": "node ./build/bin/super-service hubot --start",
+    "dev": "node ./build/bin/super-service serve --dev",
     "serve": "node ./build/bin/super-service serve --start",
+    "hubot": "node ./build/bin/super-service hubot --start",
     "build": "node ./build/bin/super-service build",
-    "test": "node ./build/bin/super-service serve --test",
+    "test": "node ./build/bin/super-service test",
     "help": "node ./build/bin/super-service help"
   },
   "dependencies": {

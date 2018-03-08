@@ -4,6 +4,7 @@ const chalk = require('chalk')
 const address = require('address')
 const shelljs = require('shelljs')
 const { info, warn, error } = require('../util/logger')
+const { hasYarn } = require('../util/env')
 
 module.exports = (api, options) => {
   api.registerCommand('hubot', {
@@ -22,7 +23,11 @@ module.exports = (api, options) => {
 
   function commandStart(options) {
     shelljs.exec('set -e')
-    shelljs.exec('yarn install')
+    if (hasYarn()) {
+      shelljs.exec('yarn install')
+    } else {
+      shelljs.exec('npm install')
+    }
     let label = ''
     // supergo.config.js || config/*.env.js
     label += readUserConfig(options)
