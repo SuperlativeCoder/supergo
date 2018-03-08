@@ -1,10 +1,13 @@
 const fs = require('fs')
 const path = require('path')
+const chalk = require('chalk')
 const readPkg = require('read-pkg')
 const merge = require('webpack-merge')
 const Config = require('webpack-chain')
 const Api = require('./api')
 const { warn, error } = require('./util/logger')
+
+const { defaults, validate } = require('./options')
 
 module.exports = class Service {
   constructor (context, { plugins, pkg, projectOptions, useBuiltIn } = {}) {
@@ -16,7 +19,9 @@ module.exports = class Service {
     this.commands = {}
     this.pkg = this.resolvePkg(pkg)
     // load project options
-    this.projectOptions = {}
+    const userOptions = this.loadProjectOptions(projectOptions)
+    const defaultOptions = defaults() // temp
+    this.projectOptions = Object.assign({}, userOptions)
 
     // load plugins & register commands
     this.plugins = this.resolvePlugins(plugins, useBuiltIn)
@@ -50,6 +55,27 @@ module.exports = class Service {
     return Promise.resolve(fn(args, rawArgv))
   }
   
+  loadProjectOptions(inlineOptions) {
+    let fileConfig
+    const configPath = path.resolve(this.context, 'supergo.config.js')
+    if (fs.existsSync(configPath)) {
+      try {
+        console.log(configPath)
+        fileConfig = require(configPath)
+        if (!fileConfig || typeof fileConfig !== 'object') {
+          error(
+            `Error loading ${chalk.bold('supergo.config.js')}: should export an object.`
+          )
+          fileConfig = null
+        }
+      } catch (e) {
+        error(`Error loading ${chalk.bold('supergo.config.js')}:`)
+        throw e
+      }
+    }
+    return fileConfig
+  }
+
   resolvePlugins() {
     const idToPlugin = id => ({
       id: id.replace(/^.\//, 'built-in:'),

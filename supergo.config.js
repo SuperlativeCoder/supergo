@@ -1,7 +1,12 @@
+
+
 module.exports = {
   hubot: {
+    env: 'config/dev.env.js',
     path: '"node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"',
-    port: 8081
+    name: 'supergo',
+    port: 8081,
+    hubot_slack_token: '"xoxb-319981722720-X3LbCHOGRTflK549WHtDRSXU"'
   },
   client: {
     start: {
@@ -16,8 +21,8 @@ module.exports = {
       }
     },
     build: {
-      index: path.resolve(__dirname, './dist/index.html'),
-      assetsRoot: path.resolve(__dirname, './dist'),
+      index: '"dist/index.html"',
+      assetsRoot: '"dist"',
       assetsSubDirectory: 'static',
       assetsPublicPath: '/manage/',
       productionSourceMap: false,
