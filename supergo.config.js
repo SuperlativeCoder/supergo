@@ -1,5 +1,3 @@
-
-
 module.exports = {
   hubot: {
     env: 'config/dev.env.js',
