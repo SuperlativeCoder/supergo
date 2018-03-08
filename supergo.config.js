@@ -12,10 +12,10 @@ module.exports = {
       autoOpenBrowser: false,
       assetsSubDirectory: 'static',
       assetsPublicPath: '/',
-      cssSourceMap: false,
+      cssSourceMap: true,
       productionSourceMap: true,
       proxyTable: {
- 
+        
       }
     },
     start: {
