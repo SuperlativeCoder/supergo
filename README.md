@@ -8,7 +8,7 @@ hubot for slack
 ## Features
 
 ## Warning
-**Token is any more useless where in package.json,Please use your own 🤪**
+**Token is any more useless where in supergo.config.json,Please use your own 🤪**
 
 ## Mapping
 ```js
@@ -34,7 +34,7 @@ hubot for slack
 |-- typings                 // *.d.ts
 |-- Dockerfile                    
 |-- external-scripts.json   // hubot 插件注册
-|-- supergo.config.js       // 配置文件
+|-- supergo.config.js       // 统一配置文件
 |-- tsconfig.json           // TS 配置
 |-- tslint.json             // TSlint 配置
 ```
