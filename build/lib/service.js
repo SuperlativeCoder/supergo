@@ -85,7 +85,9 @@ module.exports = class Service {
       './commands/hubot',
       './commands/help',
       './commands/hubot',
-      './commands/serve'
+      './commands/serve',
+      './commands/decrypt.js',
+      './commands/encrypt.js'
     ].map(idToPlugin)
     
     return builtInPlugins

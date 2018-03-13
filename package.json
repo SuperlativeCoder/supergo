@@ -16,6 +16,8 @@
     "hubot": "node ./build/bin/super-service hubot --start",
     "build": "node ./build/bin/super-service build",
     "test": "node ./build/bin/super-service test",
+    "encrypt": "node ./build/bin/super-service encrypt",
+    "decrypt": "node ./build/bin/super-service decrypt",
     "help": "node ./build/bin/super-service help"
   },
   "dependencies": {
