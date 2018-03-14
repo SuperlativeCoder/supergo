@@ -1,10 +1,9 @@
 module.exports = {
   hubot: {
-    env: 'config/dev.env.js',
     path: '"node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"',
     name: 'supergo',
     port: 8081,
-    hubot_slack_token: '""'
+    hubot_slack_token: '"encrypt:aa3eced3286639c44b0e01a781f8c946cb5a9a4be2522ed6a6c8f4e0f6d0ff5a2c2e4da846316fc8b10e8fc5a87a1bbd"'
   },
   client: {
     dev: {

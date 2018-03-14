@@ -3,6 +3,7 @@ const path = require('path')
 const chalk = require('chalk')
 const address = require('address')
 const shelljs = require('shelljs')
+const { aesDecrypt } = require('../util/crytolib')
 const { info, warn, error } = require('../util/logger')
 const { hasYarn } = require('../util/env')
 
@@ -16,12 +17,13 @@ module.exports = (api, options) => {
   },args => {
     info('Starting hubot server...')
     const command = args._[0]
+    console.log(args)
     if (args.start) {
-      commandStart(options)         
+      commandStart(args, options)         
     }
   })
 
-  function commandStart(options) {
+  function commandStart(args, options) {
     shelljs.exec('set -e')
     if (hasYarn()) {
       shelljs.exec('yarn install')
@@ -30,26 +32,42 @@ module.exports = (api, options) => {
     }
     let label = ''
     // supergo.config.js || config/*.env.js
-    label += readUserConfig(options)
-    label += readEnvConfig(options)
+    label += readUserConfig(args, options)
+    label += readEnvConfig(args,options)
     // output info
     outputInfo(options)
+    console.log(label + 'node_modules/.bin/hubot --name "' + options.hubot.name + '" "$@" --adapter "slack"')
     // exec
     shelljs.exec(label + 'node_modules/.bin/hubot --name "' + options.hubot.name + '" "$@" --adapter "slack"')
   }
 
-  function readUserConfig(options) {
+  function readUserConfig(args, options) {
     let label = ''
     for(let key in options.hubot) {
       if (key !== 'env') {
-        label += (key.toUpperCase() + '=' + options.hubot[key] + ' ')
+        if (options.hubot[key].toString().indexOf('encrypt:') === -1) {
+          label += (key.toUpperCase() + '=' + options.hubot[key] + ' ')
+        } else {
+          try {
+            let decryptStr = aesDecrypt(args.start.toString(), options.hubot[key].substring(9, options.hubot[key].length - 1))
+            label += (key.toUpperCase() + '=' + decryptStr + ' ')
+          } catch (e) {
+            error(
+              `Error decrypt ${key.toUpperCase()}`
+            )
+            throw e
+          }
+        }
       }
     }
     return label
   }
 
-  function readEnvConfig(options) {
+  function readEnvConfig(args, options) {
     let label = ''
+    if (!options.hubot.env) {
+      return label
+    }
     let envPath = path.resolve(api.service.context, options.hubot.env)
     if (fs.existsSync(envPath)) {
       try {
@@ -61,7 +79,19 @@ module.exports = (api, options) => {
           envConfig = null
         }
         for (let key in envConfig) {
-          label += (key.toUpperCase() + '=' + envConfig[key] + ' ')
+          if (envConfig[key].toString().indexOf('encrypt:') === -1) {
+            label += (key.toUpperCase() + '=' + envConfig[key] + ' ')
+          } else {
+            try {
+              let decryptStr = aesDecrypt(args.start.toString(), envConfig[key].substring(9, options.hubot[key].length - 1))
+              label += (key.toUpperCase() + '=' + decryptStr + ' ')
+            } catch (e) {
+              error(
+                `Error decrypt ${key.toUpperCase()}`
+              )
+              throw e
+            }
+          }
         }
       } catch (e) {
         warn(`Error loading ${chalk.bold('hubot.evn: *.env.js')}:`)
