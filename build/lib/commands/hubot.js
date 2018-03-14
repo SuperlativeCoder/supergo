@@ -17,7 +17,6 @@ module.exports = (api, options) => {
   },args => {
     info('Starting hubot server...')
     const command = args._[0]
-    console.log(args)
     if (args.start) {
       commandStart(args, options)         
     }
@@ -36,7 +35,6 @@ module.exports = (api, options) => {
     label += readEnvConfig(args,options)
     // output info
     outputInfo(options)
-    console.log(label + 'node_modules/.bin/hubot --name "' + options.hubot.name + '" "$@" --adapter "slack"')
     // exec
     shelljs.exec(label + 'node_modules/.bin/hubot --name "' + options.hubot.name + '" "$@" --adapter "slack"')
   }
