@@ -1,6 +1,20 @@
 - hosts: supergo.test
   remote_user: deploy
   tasks:
-    - name: run test
-      shell: echo 'helloworld'
+    - name: stop container
+      shell: docker stop {{ name }} || true
 
+    - name: remove images
+      shell: docker rmi $(docker images -f reference={{ name }}) || true
+
+    - name: run supergo-hubot
+      shell: docker run -ti
+          --name {{ name }} -p {{ port }}:8001 
+          -d bu6.io/{{ name }}:{{ version }} 
+          -c cd supergo && yarn run hubot {{ password }}
+
+    - name: check url
+      uri:
+        url: http://localhost:8001/hubot/ping
+        method: POST
+        timeout: 30
