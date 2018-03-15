@@ -1,3 +1,4 @@
+var path = require('path')
 module.exports = {
   hubot: {
     path: '"node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"',
@@ -7,24 +8,49 @@ module.exports = {
   },
   client: {
     dev: {
-      env: 'config/dev.env.js'
+      env: 'config/env/dev.env.js',
+      port: 8082,
+      cssSourceMap: true,
+      productionSourceMap: true,
+      assetsSubDirectory: 'static',
+      assetsPublicPath: '/',
+      proxy: require('./config/proxy/dev.proxy')
     },
     start: {
-      env: 'config/prod.env.js'
+      env: 'config/env/prod.env.js',
+      port: 8082,
+      cssSourceMap: false,
+      productionSourceMap: false,
+      assetsSubDirectory: 'static',
+      assetsPublicPath: '/',
+      proxy: require('./config/proxy/prod.proxy')
     },
     test: {
-      env: 'config/test.env.js'
+      env: 'config/env/test.env.js',
+      port: 8082,
+      cssSourceMap: true,
+      productionSourceMap: true,
+      assetsSubDirectory: 'static',
+      assetsPublicPath: '/',
+      proxy: require('./config/proxy/test.proxy')
+    },
+    common: {
+      vueLoader: {},
+      css: {
+        extract: true,
+        loaderOptions: {},
+        modules: false
+      }
     },
     build: {
-      index: '"dist/index.html"',
-      assetsRoot: '"dist"',
+      index: path.resolve(__dirname, '../dist/index.html'),
+      assetsRoot: path.resolve(__dirname, '../dist'),
       assetsSubDirectory: 'static',
       assetsPublicPath: '/manage/',
       productionSourceMap: false,
       cssSourceMap: false,
       productionGzip: true,
-      productionGzipExtensions: ['js', 'css'],
-      bundleAnalyzerReport: process.env.npm_config_report
+      productionGzipExtensions: ['js', 'css']
     }
   }
 }

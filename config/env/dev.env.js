@@ -1,6 +1,7 @@
+var path = require('path')
 var merge = require('webpack-merge')
 var prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
-  NODE_ENV: '"testing"'
+  NODE_ENV: '"development"'
 })
