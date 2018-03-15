@@ -4,9 +4,6 @@
     - name: stop container
       shell: docker stop {{ name }} || true
 
-    - name: remove container
-      shell: docker rm $(docker ps -a -f reference={{ name }}) || true
-
     - name: remove image
       shell: docker rmi $(docker images -f reference={{ registry }}/{{ name }}) || true
 
