@@ -14,7 +14,8 @@ module.exports = (api, options) => {
     usage: 'supergo-service serve [options]',
     options: {
       '--dev'  : `start development server`,
-      '--start': `start server`
+      '--test' : `start test server`,
+      '--start': `start productoin server`
     }
   }, args => {
     const command = args._[0]
@@ -22,6 +23,8 @@ module.exports = (api, options) => {
       commandRunServer(api, options.dev)
     } else if (args.start) {
       commandRunServer(api, options.start)
+    } else if (args.test) {
+      commandRunServer(api, options.test)
     }
   })
 

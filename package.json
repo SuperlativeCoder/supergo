@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "node ./build/bin/super-service serve --dev",
     "hubot": "node ./build/bin/super-service hubot --start",
-    "serve": "node ./build/bin/super-service serve --start",
+    "serve:prod": "node ./build/bin/super-service serve --start",
     "serve:test": "node ./build/bin/super-service serve --test",
     "build:hubot": "node ./build/bin/super-service build --hubot",
     "build:client": "node ./build/bin/super-service build --client",

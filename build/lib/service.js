@@ -75,7 +75,7 @@ module.exports = class Service {
     return fileConfig
   }
 
-  resolvePlugins() {
+  resolvePlugins(inlinePlugins, useBuiltIn) {
     const idToPlugin = id => ({
       id: id.replace(/^.\//, 'built-in:'),
       apply: require(id)
@@ -89,8 +89,13 @@ module.exports = class Service {
       './commands/decrypt.js',
       './commands/encrypt.js'
     ].map(idToPlugin)
-    
-    return builtInPlugins
+    if (inlinePlugins) {
+      return useBuiltIn !== false
+        ? builtInPlugins.concat(inlinePlugins)
+        : inlinePlugins
+    } else {
+      return builtInPlugins
+    }
   }
 
   resolvePkg(inlinePkg) {
@@ -102,8 +107,23 @@ module.exports = class Service {
       return {}
     }
   }
-  
-  resolveWebpackConfig() {
 
+  resolveChainableWebpackConfig() {
+    const chainableConfig = new Config()
+    this.webpackChainFns.forEach(fn => fn(chainableConfig))
+    return chainableConfig
+  }
+
+  resolveWebpackConfig( chainableConfig = this.resolveChainableWebpackConfig()) {
+    let config = chainableConfig.toConfig()
+    this.webpackRawConfigFns.forEach(fn => {
+      if (typeof fn === 'function') {
+        const res = fn(config)
+        if (res) config = merge(config, res)
+      } else if (fn) {
+        config = merge(config, fn)
+      }
+    })
+    return config
   }
 }
