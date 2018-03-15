@@ -12,10 +12,11 @@
   ],
   "scripts": {
     "dev": "node ./build/bin/super-service serve --dev",
-    "serve": "node ./build/bin/super-service serve --start",
     "hubot": "node ./build/bin/super-service hubot --start",
-    "build": "node ./build/bin/super-service build",
+    "serve": "node ./build/bin/super-service serve --start",
+    "serve:test": "node ./build/bin/super-service serve --test",
     "test": "node ./build/bin/super-service test",
+    "build": "node ./build/bin/super-service build",
     "encrypt": "node ./build/bin/super-service encrypt",
     "decrypt": "node ./build/bin/super-service decrypt",
     "help": "node ./build/bin/super-service help"

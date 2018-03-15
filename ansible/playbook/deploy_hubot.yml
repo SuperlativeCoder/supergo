@@ -4,17 +4,20 @@
     - name: stop container
       shell: docker stop {{ name }} || true
 
-    - name: remove images
-      shell: docker rmi $(docker images -f reference={{ name }}) || true
+    - name: remove container
+      shell: docker rm {{ name }} || true
+
+    - name: remove image
+      shell: docker rmi $(docker images -f reference={{ registry }}/{{ name }}) || true
 
     - name: run supergo-hubot
       shell: docker run -ti
           --name {{ name }} -p {{ port }}:8001 
-          -d bu6.io/{{ name }}:{{ version }} 
-          -c cd supergo && yarn run hubot {{ password }}
+          -d {{ registry }}/{{ name }}:{{ version }} 
+          bash -c 'npm run hubot "{{ password }}"'
 
     - name: check url
       uri:
-        url: http://localhost:8001/hubot/ping
+        url: http://localhost:{{ port }}/hubot/ping
         method: POST
         timeout: 30
