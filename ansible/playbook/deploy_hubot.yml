@@ -15,6 +15,7 @@
           --name {{ name }} -p {{ port }}:8081 
           -d {{ registry }}/{{ name }}:{{ version }} 
           bash -c 'npm run hubot {{ password }}'
+          
     - name: check uri
       shell: sleep 5
       uri:
