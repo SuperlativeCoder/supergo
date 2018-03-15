@@ -15,9 +15,10 @@
           --name {{ name }} -p {{ port }}:8081 
           -d {{ registry }}/{{ name }}:{{ version }} 
           bash -c 'npm run hubot {{ password }}'
-          
+    - name: wait 5 seconds
+      shell: sleep 5s
+
     - name: check uri
-      shell: sleep 5
       uri:
         url: http://localhost:{{ port }}/hubot/ping
         method: POST
