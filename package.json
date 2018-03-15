@@ -20,6 +20,7 @@
     "encrypt": "node ./build/bin/super-service encrypt",
     "decrypt": "node ./build/bin/super-service decrypt",
     "test": "node ./build/bin/super-service test",
+    "docs": "node ./build/bin/super-service docs --publish",
     "help": "node ./build/bin/super-service help"
   },
   "dependencies": {
