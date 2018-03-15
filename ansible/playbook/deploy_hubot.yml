@@ -2,18 +2,18 @@
   remote_user: deploy
   tasks:
     - name: stop container
-      shell: docker stop {{ name }} || true
+      shell: docker stop {{ server_name }} || true
 
     - name: remove container
-      shell: docker rm {{ name }} || true
+      shell: docker rm {{ server_name }} || true
 
     - name: remove image
-      shell: docker rmi $( docker images -f reference={{ registry }}/{{ name }} ) || true
+      shell: docker rmi $( docker images -f reference={{ registry }}/{{ server_name }} ) || true
 
     - name: run supergo-hubot
       shell: docker run -ti
-          --name {{ name }} -p {{ port }}:8081 
-          -d {{ registry }}/{{ name }}:{{ version }} 
+          --name {{ server_name }} -p {{ server_port }}:8081 
+          -d {{ registry }}/{{ server_name }}:{{ version }} 
           bash -c 'npm run hubot {{ password }}'
 
     - name: wait 15 seconds
@@ -21,6 +21,6 @@
 
     - name: check uri
       uri:
-        url: http://localhost:{{ port }}/hubot/ping
+        url: http://localhost:{{ server_port }}/hubot/ping
         method: GET
         timeout: 30
