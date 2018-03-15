@@ -11,4 +11,4 @@
       shell: docker run -ti
           --name {{ name }} -p {{ port }}:8001 
           -d {{ registry }}/{{ name }}:{{ version }} 
-          bash -c 'npm run hubot {{ password }}'
+          bash -c 'npm run hubot "{{ password }}"'
