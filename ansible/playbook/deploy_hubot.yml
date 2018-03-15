@@ -5,7 +5,7 @@
       shell: docker stop {{ name }} || true
 
     - name: remove container
-      shell: docker rm $( docker ps -f name={{ name }} ) || true
+      shell: docker rm {{ name }} || true
 
     - name: remove image
       shell: docker rmi $( docker images -f reference={{ registry }}/{{ name }} ) || true
@@ -20,6 +20,6 @@
 
     - name: check uri
       uri:
-        url: http://localhost:{{ port }}/hubot/ping
+        url: http://10.0.73.147:{{ port }}/hubot/ping
         method: POST
         timeout: 30
