@@ -4,8 +4,11 @@
     - name: stop container
       shell: docker stop {{ name }} || true
 
+    - name: remove container
+      shell:
+
     - name: remove image
-      shell: docker rmi $(docker images -f reference={{ registry }}/{{ name }}) || true
+      shell: docker rmi $( docker images -f reference={{ registry }}/{{ name }} ) || true
 
     - name: run supergo-hubot
       shell: docker run -ti
