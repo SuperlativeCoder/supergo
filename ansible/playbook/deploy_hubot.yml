@@ -5,7 +5,7 @@
       shell: docker stop {{ name }} || true
 
     - name: remove container
-      shell: docker rm $( docker ps -a -f reference={{ registry }}/{{ name }} ) || true
+      shell: docker rm $( docker ps -f name={{ name }} ) || true
 
     - name: remove image
       shell: docker rmi $( docker images -f reference={{ registry }}/{{ name }} ) || true
@@ -16,6 +16,7 @@
           -d {{ registry }}/{{ name }}:{{ version }} 
           bash -c 'npm run hubot {{ password }}'
     - name: check uri
+      shell: sleep 5
       uri:
         url: http://localhost:{{ port }}/hubot/ping
         method: POST
