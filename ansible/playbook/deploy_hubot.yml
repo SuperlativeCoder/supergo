@@ -16,10 +16,10 @@
           -d {{ registry }}/{{ name }}:{{ version }} 
           bash -c 'npm run hubot {{ password }}'
     - name: wait 5 seconds
-      shell: sleep 5s
+      shell: sleep 30s
 
     - name: check uri
       uri:
-        url: http://10.0.73.147:{{ port }}/hubot/ping
+        url: http://localhost:{{ port }}/hubot/ping
         method: POST
         timeout: 30
