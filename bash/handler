@@ -1,5 +1,5 @@
 #!/bin/bash 
-SELF_PATH="$(dirname $0)"; cd $SELF_PATH;
+SELF_PATH="$(dirname "$(readlink -f "$0")")"; cd $SELF_PATH;
 TMPFILE="/tmp/.handler.$(whoami)"
 #DEBUG=1
 

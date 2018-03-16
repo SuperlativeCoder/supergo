@@ -8,4 +8,6 @@ RUN mkdir -p /supergo
 COPY . /supergo
 WORKDIR /supergo
 
+RUN yarn install pm2 -g
+
 RUN yarn install

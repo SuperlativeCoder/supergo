@@ -3,7 +3,7 @@ declare namespace Hubot {
     id: any;
     name: string;
   }
-
+  
   class Message {
     user: User;
     text: string;
@@ -23,10 +23,10 @@ declare namespace Hubot {
   type ListenerCallback = (response: Response) => void;
 
   class Robot {
-      hear(regex: RegExp, callback: ListenerCallback): void;
-      hear(regex: RegExp, options: any, callback: ListenerCallback): void;
-      respond(regex: RegExp, callback: ListenerCallback): void;
-      respond(regex: RegExp, options: any, callback: ListenerCallback): void;
+    hear(regex: RegExp, callback: ListenerCallback): void;
+    hear(regex: RegExp, options: any, callback: ListenerCallback): void;
+    respond(regex: RegExp, callback: ListenerCallback): void;
+    respond(regex: RegExp, options: any, callback: ListenerCallback): void;
   }
 }
 
