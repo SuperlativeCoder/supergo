@@ -9,11 +9,11 @@ _log(){
   which logger &>/dev/null && logger -t hubot -p local3.notice "$*"; return 0
 }
 
-# _usage(){
-#   str="available commands:\n"
-#   str="$str""$(ls "$SELF_PATH/handlers" | awk '{print "  "$1}' )"
-#   echo -e "$str"
-# }
+_usage(){
+  str="available commands:\n"
+  str="$str""$(ls "$SELF_PATH/handlers" | awk '{print "  "$1}' )"
+  echo -e "$str"
+}
 
 is_function() {
   ls $SELF_PATH/handlers/$1* &>/dev/null && return 0 || return 1
