@@ -27,6 +27,7 @@ declare namespace Hubot {
     hear(regex: RegExp, options: any, callback: ListenerCallback): void;
     respond(regex: RegExp, callback: ListenerCallback): void;
     respond(regex: RegExp, options: any, callback: ListenerCallback): void;
+    test(tt:string):void;
   }
 }
 
