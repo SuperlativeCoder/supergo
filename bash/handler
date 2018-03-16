@@ -1,6 +1,5 @@
 #!/bin/bash 
 SELF_PATH="$(dirname $0)"; 
-echo $SELF_PATH
 cd $SELF_PATH;
 TMPFILE="/tmp/.handler.$(whoami)"
 #DEBUG=1
@@ -34,6 +33,6 @@ if [[ "$me" == "handler" ]]; then
   handler2="handlers/$1"
   [[ -f "$handler1" ]] && $handler1 "$2" "$3" "$4" 2>&1 ;
   [[ -f "$handler2" ]] && shift && exec $handler2 "$@"  ;
-  [[ ! -n $1 ]] 
+  [[ ! -n $1 ]] && _usage 
 fi
 exit 0
