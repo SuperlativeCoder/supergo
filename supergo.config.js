@@ -8,7 +8,7 @@ module.exports = {
   },
   client: {
     dev: {
-      env: 'config/env/dev.env.js',
+      env: require('./config/env/dev.env.js'),
       port: 8082,
       cssSourceMap: true,
       productionSourceMap: true,
@@ -17,7 +17,7 @@ module.exports = {
       proxy: require('./config/proxy/dev.proxy')
     },
     start: {
-      env: 'config/env/prod.env.js',
+      env: require('./config/env/prod.env.js'),
       port: 8082,
       cssSourceMap: false,
       productionSourceMap: false,
@@ -26,7 +26,7 @@ module.exports = {
       proxy: require('./config/proxy/prod.proxy')
     },
     test: {
-      env: 'config/env/test.env.js',
+      env: require('./config/env/test.env.js'),
       port: 8082,
       cssSourceMap: true,
       productionSourceMap: true,

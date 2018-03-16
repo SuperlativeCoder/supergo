@@ -13,11 +13,9 @@ module.exports = class Service {
   constructor (context, { plugins, pkg, projectOptions, useBuiltIn } = {}) {
     process.SUPERGO_SERVICE = this
     this.context = context
-    this.webpackChainFns = []
-    this.webpackRawConfigFns = []
-    this.devServerConfigFns = []
     this.commands = {}
     this.pkg = this.resolvePkg(pkg)
+    
     // load project options
     const userOptions = this.loadProjectOptions(projectOptions)
     const defaultOptions = defaults() // temp
@@ -28,14 +26,6 @@ module.exports = class Service {
     this.plugins.forEach(({id, apply}) => {
       apply(new Api(id, this), this.projectOptions)
     });
-    
-    // apply webpack configs from project config file
-    if (this.projectOptions.chainWebpack) {
-      this.webpackChainFns.push(this.projectOptions.chainWebpack)
-    }
-    if (this.projectOptions.configureWebpack) {
-      this.webpackRawConfigFns.push(this.projectOptions.configureWebpack)
-    }
   }
 
   run(name, args = {}, rawArgv = []) {
@@ -106,24 +96,5 @@ module.exports = class Service {
     } else {
       return {}
     }
-  }
-
-  resolveChainableWebpackConfig() {
-    const chainableConfig = new Config()
-    this.webpackChainFns.forEach(fn => fn(chainableConfig))
-    return chainableConfig
-  }
-
-  resolveWebpackConfig( chainableConfig = this.resolveChainableWebpackConfig()) {
-    let config = chainableConfig.toConfig()
-    this.webpackRawConfigFns.forEach(fn => {
-      if (typeof fn === 'function') {
-        const res = fn(config)
-        if (res) config = merge(config, res)
-      } else if (fn) {
-        config = merge(config, fn)
-      }
-    })
-    return config
   }
 }
