@@ -13,7 +13,7 @@
     - name: run supergo-hubot
       shell: docker run -ti
           --name {{ server_name }} -p {{ server_port }}:8081 
-          -v /var/hubot/shell:/supergo/bash/handlers
+          -v /var/hubot/shell:/supergo/bash/handlers 
           -d {{ registry }}/{{ server_name }}:{{ version }} 
           bash -c 'npm run hubot {{ password }}'
 
