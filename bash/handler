@@ -1,5 +1,7 @@
 #!/bin/bash 
-SELF_PATH="$(dirname $0)"; cd $SELF_PATH;
+SELF_PATH="$(dirname $0)"; 
+echo $SELF_PATH
+cd $SELF_PATH;
 TMPFILE="/tmp/.handler.$(whoami)"
 #DEBUG=1
 
@@ -7,11 +9,11 @@ _log(){
   which logger &>/dev/null && logger -t hubot -p local3.notice "$*"; return 0
 }
 
-_usage(){
-  str="available commands:\n"
-  str="$str""$(ls "$SELF_PATH/handlers" | awk '{print "  "$1}' )"
-  echo -e "$str"
-}
+# _usage(){
+#   str="available commands:\n"
+#   str="$str""$(ls "$SELF_PATH/handlers" | awk '{print "  "$1}' )"
+#   echo -e "$str"
+# }
 
 is_function() {
   ls $SELF_PATH/handlers/$1* &>/dev/null && return 0 || return 1
@@ -32,6 +34,6 @@ if [[ "$me" == "handler" ]]; then
   handler2="handlers/$1"
   [[ -f "$handler1" ]] && $handler1 "$2" "$3" "$4" 2>&1 ;
   [[ -f "$handler2" ]] && shift && exec $handler2 "$@"  ;
-  [[ ! -n $1 ]] && _usage 
+  [[ ! -n $1 ]] 
 fi
 exit 0
