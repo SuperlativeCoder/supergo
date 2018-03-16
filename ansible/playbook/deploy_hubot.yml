@@ -17,8 +17,8 @@
           -d {{ registry }}/{{ server_name }}:{{ version }} 
           bash -c 'npm run hubot {{ password }}'
 
-    - name: wait 15 seconds
-      shell: sleep 15s
+    - name: wait 30 seconds
+      shell: sleep 30s
 
     - name: check uri
       uri:
