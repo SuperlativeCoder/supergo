@@ -1,0 +1,18 @@
+{
+  "extends": "../../../../tsconfig",
+  "compilerOptions": {
+      "rootDir": "../../../../src/scripts",
+      "outDir": "../../../../scripts"
+  },
+  "include": [
+      "../../../../src/scripts/**/*",
+      "../../../../typings/**/*"
+  ],
+  "exclude": [
+      "../../../../node_modules",
+      "../../../../build",
+      "../../../../dist",
+      "../../../../scripts",
+      "../../../../test"
+  ]
+}

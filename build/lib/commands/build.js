@@ -1,9 +1,8 @@
 const ora = require('ora')
 const path = require('path')
 const chalk = require('chalk')
+const shelljs = require('shelljs')
 const webpack = require('webpack')
-
-const webpackConfig = require('../webpack/hubot/webpack.prod.conf')
 
 module.exports = (api, options) => {
   api.registerCommand('build', {
@@ -26,23 +25,6 @@ module.exports = (api, options) => {
   })
 
   function buildHubot() {
-    var spinner = ora('building ...')
-    spinner.start()
-    webpack(webpackConfig, function (err, stats) {
-      spinner.stop()
-      if (err) throw err
-      process.stdout.write(stats.toString({
-        colors: true,
-        modules: false,
-        children: false,
-        chunks: false,
-        chunkModules: false
-      }) + '\n\n')
-      if (stats.hasErrors()) {
-        console.log(chalk.red('  Build Hubot failed with errors.\n'))
-        process.exit(1)
-      }
-      console.log(chalk.cyan('  Build Hubot complete.\n'))
-    })
+    shelljs.exec('tsc -p ./build/lib/config/hubot/tsconfig.json')
   }
 }
