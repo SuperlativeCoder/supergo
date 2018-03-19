@@ -27,10 +27,10 @@ module.exports = (api, options) => {
   function buildHubot() {
     var spinner = ora('building for production...')
     spinner.start()
-    var child = shelljs.exec('tsc -p ./build/lib/config/hubot/tsconfig.json')
-    child.stdout.on('data', function(data) {
-      spinner.stop()
-      console.log(chalk.cyan('  Build Hubot complete.\n'))
-    });
+    var child = shelljs.exec('tsc -p ./build/lib/config/hubot/tsconfig.json'
+      , function(code, stdout, stderr){
+        spinner.stop()
+        console.log(chalk.cyan('\n  Build Hubot complete. \n'))
+    })
   }
 }
