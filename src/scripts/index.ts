@@ -1,7 +1,5 @@
-function entry(robot:Hubot.Robot) {
-  robot.hear(/hello/i, (res) => {
+module.exports = (robot:Hubot.Robot) => {
+  robot.hear(/helloworld/i, (res) => {
     res.send('world')
   })
 }
-
-export = entry
