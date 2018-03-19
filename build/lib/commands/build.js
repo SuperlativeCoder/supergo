@@ -5,8 +5,8 @@ const webpack = require('webpack')
 
 const webpackConfig = require('../webpack/hubot/webpack.prod.conf')
 
-var spinner = ora('building ...')
-spinner.start()
+// var spinner = ora('building ...')
+// spinner.start()
 
 module.exports = (api, options) => {
   api.registerCommand('build', {

@@ -35,8 +35,8 @@ module.exports = (api, options) => {
     label += readEnvConfig(args,options)
     // output info
     outputInfo(options)
-    shelljs.exec('tsc -p ')
     // exec
+    console.log(label + 'node_modules/.bin/hubot --name "' + options.hubot.name + '" "$@" --adapter "slack"')
     shelljs.exec(label + 'node_modules/.bin/hubot --name "' + options.hubot.name + '" "$@" --adapter "slack"')
   }
 

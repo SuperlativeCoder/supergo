@@ -1,15 +1,15 @@
 const path = require('path')
 var webpack = require('webpack')
 
-module.export = {
-  entry: {
-    app: ['./src/scripts/index.ts']
-  },
+module.exports = {
+  entry: [
+    path.resolve(__dirname, '../../../../src/scripts/index.ts')
+  ],
   output: {
-    path: './scripts/',
+    path: path.resolve(__dirname, '../../../../scripts/'),
     filename: 'hubot.min.js',
   },
-  resolue: {
+  resolve: {
     extensions: ['.ts', '.js', '.json']
   },
   module: {
