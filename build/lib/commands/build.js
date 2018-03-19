@@ -5,9 +5,6 @@ const webpack = require('webpack')
 
 const webpackConfig = require('../webpack/hubot/webpack.prod.conf')
 
-// var spinner = ora('building ...')
-// spinner.start()
-
 module.exports = (api, options) => {
   api.registerCommand('build', {
     description: 'build & complier',
@@ -29,7 +26,8 @@ module.exports = (api, options) => {
   })
 
   function buildHubot() {
-    
+    var spinner = ora('building ...')
+    spinner.start()
     webpack(webpackConfig, function (err, stats) {
       spinner.stop()
       if (err) throw err

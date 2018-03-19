@@ -1,5 +1,5 @@
 module.exports = (robot:Hubot.Robot) =>{
-  robot.hear(/hellow/i, (res) => {
+  robot.hear(/hello/i, (res) => {
     res.send('world')
   })
 }
