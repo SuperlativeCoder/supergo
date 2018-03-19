@@ -9,3 +9,5 @@ COPY . /supergo
 WORKDIR /supergo
 
 RUN yarn install
+
+RUN yarn run build:hubot

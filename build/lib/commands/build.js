@@ -25,6 +25,12 @@ module.exports = (api, options) => {
   })
 
   function buildHubot() {
-    shelljs.exec('tsc -p ./build/lib/config/hubot/tsconfig.json')
+    var spinner = ora('building for production...')
+    spinner.start()
+    var child = shelljs.exec('tsc -p ./build/lib/config/hubot/tsconfig.json')
+    child.stdout.on('data', function(data) {
+      spinner.stop()
+      console.log(chalk.cyan('  Build Hubot complete.\n'))
+    });
   }
 }
