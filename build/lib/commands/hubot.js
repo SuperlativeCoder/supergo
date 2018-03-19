@@ -36,7 +36,6 @@ module.exports = (api, options) => {
     // output info
     outputInfo(options)
     // exec
-    console.log(label + 'node_modules/.bin/hubot --name "' + options.hubot.name + '" "$@" --adapter "slack"')
     shelljs.exec(label + 'node_modules/.bin/hubot --name "' + options.hubot.name + '" "$@" --adapter "slack"')
   }
 
