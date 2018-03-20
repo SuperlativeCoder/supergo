@@ -1,6 +1,6 @@
-var path = require('path')
-
-var utils = require('../../util/utils')
+const path = require('path')
+const utils = require('../../util/utils')
+const config = require('../../../../supergo.config')
 
 function resolve(dir) {
   return path.join(__dirname, '../../../..', dir)
@@ -27,7 +27,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        // options: vueLoaderConfig
+        options: config.client.common.vueLoader
       },
       {
         test: /\.ts$/,

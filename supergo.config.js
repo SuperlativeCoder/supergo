@@ -22,7 +22,7 @@ module.exports = {
       cssSourceMap: false,
       productionSourceMap: false,
       assetsSubDirectory: 'static',
-      assetsPublicPath: '/',
+      assetsPublicPath: '/client',
       proxy: require('./config/proxy/prod.proxy')
     },
     test: {
@@ -31,11 +31,16 @@ module.exports = {
       cssSourceMap: true,
       productionSourceMap: true,
       assetsSubDirectory: 'static',
-      assetsPublicPath: '/',
+      assetsPublicPath: '/client',
       proxy: require('./config/proxy/test.proxy')
     },
     common: {
-      vueLoader: {},
+      vueLoader: {
+        preserveWhitespace: false,
+        template: {
+          doctype: 'html'
+        }
+      },
       css: {
         extract: true,
         loaderOptions: {},

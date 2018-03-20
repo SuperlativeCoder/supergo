@@ -1,12 +1,14 @@
 import * as Koa from 'koa'
 import * as koaStatic from 'koa-static'
 import * as logger from 'koa-logger'
+import * as path from 'path'
+
+const port = process.env.port
 
 const app = new Koa()
-// const publicFolder = ''
 
 app.use(logger())
-// app.use(koaStatic(publicFolder))
+app.use(koaStatic('../client'))
 
-app.listen(3000)
-console.log(`Server running on port 3000`)
+app.listen(process.env.port)
+console.log(`Server running on port ${process.env.port}`)

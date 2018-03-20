@@ -23,20 +23,20 @@ module.exports = (api, options) => {
     if (args.hubot) {
       buildHubot()
     } else if (args.test) {
-      buildServerAndClient('test', testServerWebpackconfig, testClientWebpackConfig)
+      buildByWebpack('test server', testServerWebpackconfig)
     } else if (args.prod) {
-      buildServerAndClient('prod', prodServerWebpackConfig, prodClientWebpackConfig)
+      buildByWebpack('prod server', prodServerWebpackConfig)
     }
   })
 
   /**
    * test server
    */
-  function buildServerAndClient(name, serveConfig, clientConfig) {
+  function buildByWebpack(name, webpackConfig) {
     var spinner_0 = ora('building ' + name + ' for test...')
     spinner_0.start()
     // build server
-    webpack(serveConfig, function(err, stats) {
+    webpack(webpackConfig, function(err, stats) {
       spinner_0.stop()
       if (err) throw err
       process.stdout.write(stats.toString({
@@ -51,7 +51,6 @@ module.exports = (api, options) => {
         console.log(chalk.red('  Build ' + name + ' failed with errors.\n'))
         process.exit(1)
       }
-
       console.log(chalk.cyan('  Build ' + name + ' complete.\n'))
     })
   }
