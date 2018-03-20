@@ -1,6 +1,7 @@
-var fs = require('fs')
+const fs = require('fs')
 const path = require('path')
-var nodeExternals = require('webpack-node-externals');
+const webpack = require('webpack')
+const nodeExternals = require('webpack-node-externals');
 
 function resolve(dir) {
   return path.resolve(__dirname, '../../../..', dir)
