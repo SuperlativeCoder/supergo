@@ -1,5 +1,7 @@
 var path = require('path')
 
+var utils = require('../../util/utils')
+
 function resolve(dir) {
   return path.join(__dirname, '../../../..', dir)
 }
@@ -25,7 +27,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
+        // options: vueLoaderConfig
       },
       {
         test: /\.ts$/,

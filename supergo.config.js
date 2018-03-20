@@ -16,7 +16,7 @@ module.exports = {
       assetsPublicPath: '/',
       proxy: require('./config/proxy/dev.proxy')
     },
-    start: {
+    prod: {
       env: require('./config/env/prod.env.js'),
       port: 8082,
       cssSourceMap: false,

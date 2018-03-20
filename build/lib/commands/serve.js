@@ -29,8 +29,7 @@ module.exports = (api, options) => {
       shelljs.exec('set -e')
       shelljs.exec('nodemon --watch "./src/server/**/*" -e ts,tsx --exec "ts-node" src/server/index.ts')
     } else {
-      shelljs.exec('set -e')
-      shelljs.exec('node dist/server/index.js')
+      // env is not 'development'
     }
   }
 
