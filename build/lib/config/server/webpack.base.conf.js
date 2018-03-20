@@ -1,18 +1,10 @@
 var fs = require('fs')
 const path = require('path')
+var nodeExternals = require('webpack-node-externals');
 
 function resolve(dir) {
   return path.resolve(__dirname, '../../../..', dir)
 }
-
-var nodeModules = {};
-fs.readdirSync('node_modules')
-  .filter(function (x) {
-    return ['.bin'].indexOf(x) === -1;
-  })
-  .forEach(function (mod) {
-    nodeModules[mod] = 'commonjs ' + mod;
-  });
 
 module.exports = {
   devtool: 'source-map',
@@ -37,5 +29,5 @@ module.exports = {
       { test: /\.json$/, loader: 'json-loader' }
     ]
   },
-  externals: nodeModules
+  externals: [ nodeExternals() ]
 }

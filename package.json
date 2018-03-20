@@ -99,6 +99,7 @@
     "webpack": "^4.1.0",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-chain": "^4.5.0",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "webpack-node-externals": "^1.6.0"
   }
 }
