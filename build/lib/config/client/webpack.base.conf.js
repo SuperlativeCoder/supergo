@@ -13,11 +13,9 @@ function resolve(dir) {
 const { transformer, formatter } = require('../../webpack/resolveLoaderError')
 
 module.exports = {
-  entry: {
-    app: [ resolve('./src/client/main.ts') ]
-  },
+  entry: [ resolve('./src/client/main.ts') ],
   output: {
-    path: resolve('./dist/client/'),
+    path: resolve('./dist/client'),
     filename: '[name].js',
     publicPath: '/'
   },
@@ -25,20 +23,25 @@ module.exports = {
     extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src/client/')
+      '@': resolve('src/client')
     }
   },
   module: {
     rules: [
+      { exclude: /node_modules/ },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          loaders: '',
+          loaders: utils.cssLoaders({
+            sourceMap: true,
+            extract: false,
+            ts: ['ts-loader', 'tslint-loader']
+          }),
           transformToRequire: {
-            video: 'src/client',
-            source: 'src/client',
-            img: 'src/client',
+            video: 'src',
+            source: 'src',
+            img: 'src',
             image: 'xlink:href'
           }
         }
@@ -58,26 +61,26 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpe?g|gif)(\?.*)?$/,
+        test: /\.(png|jpeg|jpg|gif)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
-          name: 'static/images/[name].[hash:8].[ext]'
+          limit: 1000,
+          name: 'static/img/[name].[hash:8].[ext]'
         }
       },
       {
         test: /\.(svg)(\?.*)?$/,
         loader: 'file-loader',
         options: {
-          limit: 10000,
-          name: 'static/images/[name].[hash:8].[ext]'
+          limit: 1000,
+          name: 'static/img/[name].[hash:8].[ext]'
         }
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 1000,
           name: 'static/media/[name].[hash:8].[ext]'
         }
       },
@@ -85,7 +88,7 @@ module.exports = {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 1000,
           name: 'static/fonts/[name].[hash:8].[ext]'
         }
       }

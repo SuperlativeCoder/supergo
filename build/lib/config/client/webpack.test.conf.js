@@ -4,6 +4,7 @@ const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 const config = require('../../../../supergo.config')
 const baseConfig = require('./webpack.base.conf')
@@ -26,6 +27,7 @@ module.exports = merge(baseConfig, {
   output: {
     path: resolve('./dist/client/'),
     filename: 'static/js/[name].[chunkhash].js',
+    chunkFilename: utils.assetsPath('static/js/[id].[chunkhash].js'),
     publicPath: '/'
   },
   plugins: [
@@ -47,7 +49,12 @@ module.exports = merge(baseConfig, {
       chunksSortMode: 'dependency'
     }),
     new ExtractTextPlugin({
-      filename: resolve('./dist/client/static/css/[name].[contenthash].css')
+      filename: 'static/css/[name].[contenthash].css'
+    }),
+    new OptimizeCSSPlugin({
+      cssProcessorOptions: {
+        safe: true
+      }
     }),
     new CopyWebpackPlugin([
       {
