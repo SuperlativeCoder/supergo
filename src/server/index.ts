@@ -3,6 +3,7 @@ import * as koaWebpack from 'koa-webpack'
 import * as koaStatic from 'koa-static'
 import * as logger from 'koa-logger'
 import * as path from 'path'
+import { WebpackDevMiddleware } from 'webpack-dev-middleware';
 
 const port = process.env.port
 
@@ -12,7 +13,8 @@ app.use(logger())
 
 if (process.env.NODE_ENV === 'development') {
   app.use(koaWebpack({
-      config: require('../../build/lib/config/client/webpack.dev.conf')
+      config: require('../../build/lib/config/client/webpack.dev.conf'),
+      hot: {}
   }))
 }
 app.use(koaStatic(path.resolve(__dirname, '../..' ,'./dist/client')))

@@ -10,8 +10,6 @@ function resolve(dir) {
   return path.join(__dirname, '../../../..', dir)
 }
 
-const { transformer, formatter } = require('../../webpack/resolveLoaderError')
-
 module.exports = {
   entry: [ 
     resolve('./src/client/main.ts') 
