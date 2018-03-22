@@ -23,9 +23,11 @@ module.exports = (api, options) => {
     if (args.hubot) {
       buildHubot()
     } else if (args.test) {
-      buildByWebpack('test server', testServerWebpackconfig)
+      buildByWebpack('test client', testClientWebpackConfig)
+      //buildByWebpack('test server', testServerWebpackconfig)
     } else if (args.prod) {
-      buildByWebpack('prod server', prodServerWebpackConfig)
+      buildByWebpack('test client', prodClientWebpackConfig)
+      //buildByWebpack('prod server', prodServerWebpackConfig)
     }
   })
 
@@ -33,11 +35,12 @@ module.exports = (api, options) => {
    * test server
    */
   function buildByWebpack(name, webpackConfig) {
-    var spinner_0 = ora('building ' + name + ' for test...')
-    spinner_0.start()
+    var spinner = ora('building ' + name + ' for test...')
+    spinner.start()
+    console.log()
     // build server
     webpack(webpackConfig, function(err, stats) {
-      spinner_0.stop()
+      spinner.stop()
       if (err) throw err
       process.stdout.write(stats.toString({
         colors: true,

@@ -1,4 +1,8 @@
 const path = require('path')
+const webpack = require('webpack')
+const FriendErrorsPlugin = require('friendly-errors-webpack-plugin')
+const CaseSensitivePatWebpackPlugin = require('case-sensitive-paths-webpack-plugin')
+
 const utils = require('../../util/utils')
 const config = require('../../../../supergo.config')
 
@@ -6,14 +10,16 @@ function resolve(dir) {
   return path.join(__dirname, '../../../..', dir)
 }
 
+const { transformer, formatter } = require('../../webpack/resolveLoaderError')
+
 module.exports = {
-  entry: [
-    resolve('./src/client/main.ts')
-  ],
+  entry: {
+    app: [ resolve('./src/client/main.ts') ]
+  },
   output: {
     path: resolve('./dist/client/'),
     filename: '[name].js',
-    publicPath: '/static'
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
@@ -27,7 +33,15 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: config.client.common.vueLoader
+        options: {
+          loaders: '',
+          transformToRequire: {
+            video: 'src/client',
+            source: 'src/client',
+            img: 'src/client',
+            image: 'xlink:href'
+          }
+        }
       },
       {
         test: /\.ts$/,
@@ -48,7 +62,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:8].[ext]')
+          name: 'static/images/[name].[hash:8].[ext]'
         }
       },
       {
@@ -56,7 +70,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:8].[ext]')
+          name: 'static/images/[name].[hash:8].[ext]'
         }
       },
       {
@@ -64,7 +78,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('media/[name].[hash:8].[ext]')
+          name: 'static/media/[name].[hash:8].[ext]'
         }
       },
       {
@@ -72,9 +86,13 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:8].[ext]')
+          name: 'static/fonts/[name].[hash:8].[ext]'
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new CaseSensitivePatWebpackPlugin(),
+    new FriendErrorsPlugin()
+  ]
 }

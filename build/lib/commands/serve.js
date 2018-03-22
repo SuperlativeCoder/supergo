@@ -7,7 +7,6 @@ const proxyMiddleware = require('koa-proxy')
 const { hasYarn } = require('../util/env')
 const { info, error } = require('../util/logger')
 
-const defaults = { mode: 'development', host: '0.0.0.0', port: 8082, https: false }
 
 module.exports = (api, options) => {
   api.registerCommand('serve', {
@@ -27,7 +26,7 @@ module.exports = (api, options) => {
     resolveEnv(options.env)
     if (process.env.NODE_ENV === 'development') {
       shelljs.exec('set -e')
-      shelljs.exec('nodemon --watch "./src/server/**/*" -e ts,tsx --exec "ts-node" src/server/index.ts')
+      shelljs.exec('cross-env NODE_ENV=development nodemon --watch "./src/server/**/*" -e ts,tsx --exec "ts-node" src/server/index.ts')
     } else {
       // env is not 'development'
     }
