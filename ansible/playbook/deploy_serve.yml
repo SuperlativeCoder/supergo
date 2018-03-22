@@ -1,0 +1,24 @@
+- hosts: supergo.test
+  remote_user: deploy
+  tasks:
+    - name: stop container
+      shell: docker stop {{ server_name }} || true
+    
+    - name: remove container
+      shell: docker rm {{ server_name }} || true
+
+    - name: remove image
+      shell: docker rmi $（ docker images -f reference={{ registry }}/{{ server_name }} || true
+    
+    - name: run supergo-server
+      shell: docker run -ti
+        --name {{ server_name }} -p {{ server_port }}:8082 
+        -d {{ registry }}/{{ server_name }}:{{ version }} 
+        bash -c 'node ./dist/server/main.min.js'
+
+    - name: check uri
+      uri:
+        url: http://localhost:{{ server_port }}/ping
+        method: GET
+        timeout: 30
+        

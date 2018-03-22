@@ -1,3 +1,0 @@
-- hosts: supergo.test
-  remote_user: deploy
-  tasks:
