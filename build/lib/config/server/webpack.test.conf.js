@@ -10,7 +10,7 @@ module.exports = merge(baseConfig, {
   target: 'node',
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': config.client.test
+      'process.env': config.client.test.env
     })
   ],
 })

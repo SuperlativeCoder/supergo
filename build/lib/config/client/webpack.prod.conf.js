@@ -17,21 +17,21 @@ function resolve(dir) {
 module.exports = merge(baseConfig, {
   module: {
     rules: utils.styleLoaders({
-      sourceMap: true,
+      sourceMap: config.client.prod.cssSourceMap,
       extract: true
     })
   },
   mode: 'development',
-  devtool: '#source-map',
+  devtool: config.client.prod.productionSourceMap ? '#source-map' : false,
   output: {
     path: resolve('./dist/client/'),
-    filename: 'static/js/[name].[chunkhash].js',
-    chunkFilename: utils.assetsPath('static/js/[id].[chunkhash].js'),
+    filename: config.client.prod.assetsSubDirectory + '/js/[name].[chunkhash].js',
+    chunkFilename: utils.assetsPath(config.client.prod.assetsSubDirectory + '/js/[id].[chunkhash].js'),
     publicPath: '/'
   },
   plugins: [
     new webpack.DefinePlugin({
-        //'process.env': config.client.dev
+        'process.env': config.client.prod.env
     }),
     new HtmlWebpackPlugin({
       filename: resolve('./dist/client/index.html'),
@@ -41,14 +41,11 @@ module.exports = merge(baseConfig, {
         removeComments: true,
         collapseWhitespace: true,
         removeAttributeQuotes: true
-        // more options:
-        // https://github.com/kangax/html-minifier#options-quick-reference
       },
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
     new ExtractTextPlugin({
-      filename: 'static/css/[name].[contenthash].css'
+      filename: config.client.prod.assetsSubDirectory + '/css/[name].[contenthash].css'
     }),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {

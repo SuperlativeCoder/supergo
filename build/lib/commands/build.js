@@ -35,12 +35,8 @@ module.exports = (api, options) => {
    * test server
    */
   function buildByWebpack(name, webpackConfig) {
-    var spinner = ora('building ' + name + ' for test...')
-    spinner.start()
-    console.log()
     // build server
     webpack(webpackConfig, function(err, stats) {
-      spinner.stop()
       if (err) throw err
       process.stdout.write(stats.toString({
         colors: true,

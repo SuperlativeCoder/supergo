@@ -10,10 +10,7 @@ module.exports = {
     dev: {
       env: require('./config/env/dev.env.js'),
       port: 8082,
-      cssSourceMap: true,
-      productionSourceMap: true,
       assetsSubDirectory: 'static',
-      assetsPublicPath: '/',
       proxy: require('./config/proxy/dev.proxy')
     },
     prod: {
@@ -22,7 +19,6 @@ module.exports = {
       cssSourceMap: false,
       productionSourceMap: false,
       assetsSubDirectory: 'static',
-      assetsPublicPath: '/client',
       proxy: require('./config/proxy/prod.proxy')
     },
     test: {
@@ -31,21 +27,7 @@ module.exports = {
       cssSourceMap: true,
       productionSourceMap: true,
       assetsSubDirectory: 'static',
-      assetsPublicPath: '/client',
       proxy: require('./config/proxy/test.proxy')
-    },
-    common: {
-      vueLoader: {
-        preserveWhitespace: false,
-        template: {
-          doctype: 'html'
-        }
-      },
-      css: {
-        extract: true,
-        loaderOptions: {},
-        modules: false
-      }
     },
     build: {
       index: path.resolve(__dirname, '../dist/index.html'),

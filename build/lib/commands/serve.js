@@ -4,9 +4,10 @@ const shelljs = require('shelljs')
 const webpack = require('webpack')
 const hotMiddleware = require('koa-webpack')
 const proxyMiddleware = require('koa-proxy')
+
 const { hasYarn } = require('../util/env')
 const { info, error } = require('../util/logger')
-
+const config = require('../../../supergo.config')
 
 module.exports = (api, options) => {
   api.registerCommand('serve', {
@@ -24,12 +25,16 @@ module.exports = (api, options) => {
 
   function commandRunServer(api, options) {
     resolveEnv(options.env)
+    let port = 8080
     if (process.env.NODE_ENV === 'development') {
-      shelljs.exec('set -e')
-      shelljs.exec('cross-env NODE_ENV=development nodemon --watch "./src/server/**/*" -e ts,tsx --exec "ts-node" src/server/index.ts')
-    } else {
-      // env is not 'development'
+      port = config.client.dev.port
+    } else if (process.env.NODE_ENV === 'production') {
+      port = config.client.prod.port
+    } else if (process.env.NODE_ENV === 'test') {
+      port = config.client.test.port
     }
+    shelljs.exec('set -e')
+    shelljs.exec('cross-env port=' + port + ' nodemon --watch "./src/server/**/*" -e ts,tsx --exec "ts-node" src/server/index.ts')
   }
 
   function resolveEnv(env) {

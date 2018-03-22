@@ -17,5 +17,5 @@ if (process.env.NODE_ENV === 'development') {
 }
 app.use(koaStatic(path.resolve(__dirname, '../..' ,'./dist/client')))
 
-app.listen(3000)
-console.log(`Server running on port 3000`)
+app.listen(process.env.port)
+console.log(`Server running on port ${ process.env.port }`)

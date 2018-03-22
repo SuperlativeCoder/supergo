@@ -9,7 +9,7 @@ module.exports = merge(baseConfig, {
   mode: JSON.parse(config.client.prod.env.NODE_ENV),
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': config.client.prod
+      'process.env': config.client.prod.env
     })
   ],
 })
