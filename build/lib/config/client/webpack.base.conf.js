@@ -13,10 +13,12 @@ function resolve(dir) {
 const { transformer, formatter } = require('../../webpack/resolveLoaderError')
 
 module.exports = {
-  entry: [ resolve('./src/client/main.ts') ],
+  entry: [ 
+    resolve('./src/client/main.ts') 
+  ],
   output: {
     path: resolve('./dist/client'),
-    filename: '[name].js',
+    filename: 'static/js/[name].js',
     publicPath: '/'
   },
   resolve: {
@@ -35,8 +37,7 @@ module.exports = {
         options: {
           loaders: utils.cssLoaders({
             sourceMap: true,
-            extract: false,
-            ts: ['ts-loader', 'tslint-loader']
+            extract: true
           }),
           transformToRequire: {
             video: 'src',

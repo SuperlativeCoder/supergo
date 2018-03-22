@@ -24,10 +24,10 @@ module.exports = (api, options) => {
       buildHubot()
     } else if (args.test) {
       buildByWebpack('test client', testClientWebpackConfig)
-      //buildByWebpack('test server', testServerWebpackconfig)
+      buildByWebpack('test server', testServerWebpackconfig)
     } else if (args.prod) {
       buildByWebpack('test client', prodClientWebpackConfig)
-      //buildByWebpack('prod server', prodServerWebpackConfig)
+      buildByWebpack('prod server', prodServerWebpackConfig)
     }
   })
 

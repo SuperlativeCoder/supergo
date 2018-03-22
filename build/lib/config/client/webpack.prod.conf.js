@@ -18,8 +18,7 @@ module.exports = merge(baseConfig, {
   module: {
     rules: utils.styleLoaders({
       sourceMap: true,
-      extract: true,
-      sourceMap: true
+      extract: true
     })
   },
   mode: 'development',
