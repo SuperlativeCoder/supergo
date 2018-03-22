@@ -103,7 +103,7 @@
     "vue-server-renderer": "^2.5.16",
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
-    "webpack": "^4.1.0",
+    "webpack": "^4.2.0",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-chain": "^4.5.0",
     "webpack-hot-middleware": "^2.21.2",

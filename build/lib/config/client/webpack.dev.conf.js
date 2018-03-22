@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const config = require('../../../../supergo.config')
 const baseConfig = require('./webpack.base.conf')
@@ -23,6 +24,9 @@ module.exports = merge(baseConfig, {
       extract: true,
       sourceMap: true
     })
+  },
+  devServer: {
+    stats: 'errors-only',
   },
   mode: 'development',
   devtool: '#cheap-module-eval-source-map',
