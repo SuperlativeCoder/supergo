@@ -7,6 +7,7 @@ const config = require('../../../../supergo.config')
 
 module.exports = merge(baseConfig, {
   mode: JSON.parse(config.client.prod.env.NODE_ENV),
+  target: 'node',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.client.test

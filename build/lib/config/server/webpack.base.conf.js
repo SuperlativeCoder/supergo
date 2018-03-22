@@ -10,6 +10,15 @@ function resolve(dir) {
 module.exports = {
   devtool: 'source-map',
   target: 'node',
+  node: {
+    console: true,
+    global: true,
+    process: true,
+    Buffer: false,
+    __filename: false,
+    __dirname: false,
+    setImmediate: false
+  },
   entry: [
     resolve('./src/server/index.ts')
   ],
