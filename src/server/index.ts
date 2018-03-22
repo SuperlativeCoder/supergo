@@ -14,17 +14,10 @@ app.use(logger())
 
 if (process.env.NODE_ENV === 'development') {
   const config = require('../../build/lib/config/client/webpack.dev.conf')
-  const complier = webpack(config)
   app.use(koaWebpack({
-      compiler: complier,
-      hot: {
-        log: false,
-        heartbeat: 2000
-      },
-      dev: {
-        publicPath: '/',
-        stats: 'none'
-      }
+      config: config,
+      hot: { log: false, heartbeat: 2000 },
+      dev: { publicPath: '/', stats: 'none', logLevel: 'error' }
   }))
 }
 app.use(koaStatic(path.resolve(__dirname, '../..' ,'./dist/client')))

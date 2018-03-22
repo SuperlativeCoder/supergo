@@ -25,9 +25,6 @@ module.exports = merge(baseConfig, {
       sourceMap: true
     })
   },
-  devServer: {
-    stats: 'errors-only',
-  },
   mode: 'development',
   devtool: '#cheap-module-eval-source-map',
   plugins: [
