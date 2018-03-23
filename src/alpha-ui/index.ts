@@ -1,5 +1,5 @@
 import Vue, { PluginObject, PluginFunction } from 'vue';
-import Header from '@/alphaui/packages/Header'
+import Header from '@/alpha-ui/packages/Header'
 
 const components: any[] = [
   Header,
