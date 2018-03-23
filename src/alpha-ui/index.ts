@@ -8,7 +8,7 @@ const components: any[] = [
 class Alphaui implements PluginObject<any> {
   public install: PluginFunction<any> = (vue) => {
     components.map(component => {
-      vue.component('v-' + component.name, component)
+      vue.component('vs-' + component.name, component)
     })
   }
 }
