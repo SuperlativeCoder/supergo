@@ -42,7 +42,12 @@ module.exports = {
             source: 'src',
             img: 'src',
             image: 'xlink:href'
-          }
+          },
+          postcss: [
+            require('postcss-cssnext')({
+              browsers: ["> 1%", "last 2 versions", "ie > 8"]
+            })
+          ]
         }
       },
       {
