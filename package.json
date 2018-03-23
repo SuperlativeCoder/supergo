@@ -17,6 +17,7 @@
     "build:test": "node ./build/bin/super-service build --test",
     "build:prod": "node ./build/bin/super-service build --prod",
     "build:alpha-ui": "",
+    "build:alpha-charts": "",
     "build:alpha-motion": "",
     "build:plugins": "",
     "build:docs": "",
