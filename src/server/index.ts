@@ -20,6 +20,7 @@ if (process.env.NODE_ENV === 'development') {
       dev: { publicPath: '/', stats: 'none', logLevel: 'error' }
   }))
 }
+console.log(path.resolve(__dirname, '../..' ,'./dist/client'))
 app.use(koaStatic(path.resolve(__dirname, '../..' ,'./dist/client')))
 
 app.listen(process.env.port)
