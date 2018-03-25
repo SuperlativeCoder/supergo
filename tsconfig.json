@@ -23,7 +23,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.vue",
+    "src/client/**/*.ts",
+    "src/client/**/*.vue",
     "test/**/*.ts",
     "typings/**/*.ts"
   ],
