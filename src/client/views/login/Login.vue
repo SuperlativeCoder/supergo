@@ -43,11 +43,11 @@ export default Vue.extend({
       top: 50%;
       right: 30%;
       display: block;
-      background-color: #80b692;
-      color: white;
+      background-color:white;
+      color: #80b692;
       text-align:center;
-      height: 30px;
-      line-height: 30px;
+      height: 40px;
+      line-height: 40px;
       width: 200px;
       border-radius: 5px;
     }
@@ -69,11 +69,11 @@ export default Vue.extend({
       position:absolute;
       display: block;
       text-align: center;
-      background-color: #80b692;
-      color: white;
+      background-color:white;
+      color: #80b692;
       bottom: 40%;
-      height: 30px;
-      line-height: 30px;
+      height: 40px;
+      line-height: 40px;
       width: 200px;
       left: 50%;
       margin-left: -100px;
