@@ -1,4 +1,4 @@
-import { callbackify } from "util";
+import { callbackify } from 'util';
 import Snow from './src/Snow'
 
 class Loginbg {
@@ -39,7 +39,7 @@ class Loginbg {
 
   private createScene(canvasContext: CanvasRenderingContext2D) {
     const gradient: CanvasGradient = canvasContext.createLinearGradient(0, 0, 0, this.canvasHeight / 10 * 7)
-    gradient.addColorStop(0, 'rgb(90,121,188)') 
+    gradient.addColorStop(0, 'rgb(90,121,188)')
     gradient.addColorStop(0.4, 'rgb(123,148,200)')
     gradient.addColorStop(1, 'rgb(156,175,214')
     canvasContext.fillStyle = gradient
