@@ -25,16 +25,16 @@ class Loginbg {
     this.snowSpeed = 1
   }
 
-  public show() {
+  public show(width: number, height: number) {
     const self = this
     if (this.mycanvas !== null) {
-      this.mycanvas.width = this.canvasWidth
-      this.mycanvas.height = this.canvasHeight
+      this.mycanvas.width = this.canvasWidth = width
+      this.mycanvas.height = this.canvasHeight = height
     }
     const canvasContext = this.mycanvas.getContext('2d') as CanvasRenderingContext2D
-    this.clearScene(canvasContext)
-    this.createScene(canvasContext)
-    this.createSnows(canvasContext)
+    this.clearScene(canvasContext)  // 清楚场景
+    this.createScene(canvasContext) // 创建场景
+    this.createSnows(canvasContext) // 创建下雪
   }
 
   private createScene(canvasContext: CanvasRenderingContext2D) {
