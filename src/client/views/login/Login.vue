@@ -6,8 +6,7 @@
         屏幕有多大，雪就有多大
       </div>
       <div id="form">
-        <canvas id="login_logo" width="400" height="400" 
-          style="background:rgba(255,255,255,0);z-index: 9999;margin-left: 46%"></canvas>
+        <canvas id="login_logo" width="200" height="200"></canvas>
         <a id="zzr_btn_0" href="#">助这儿登录</a>
       </div>
     </div>
@@ -21,6 +20,7 @@
 import Vue from 'vue'
 import Loginbg from '@/client/directive/loginbg'
 import LogoParticle from '@/client/directive/particle'
+import { setInterval } from 'timers';
 
 const logImg = require('../../assets/logo.png')
 
@@ -31,10 +31,13 @@ export default Vue.extend({
     particle.show()
     function animation() {
       loginbg.show(window.innerWidth, window.innerHeight)
-      particle.animal()
       window.requestAnimationFrame(animation)
     }
+    function particleAnimation() {
+      particle.animal()
+    }
     window.requestAnimationFrame(animation)
+    setInterval(particleAnimation, 100)
   }
 })
 </script>
@@ -58,8 +61,15 @@ export default Vue.extend({
       width: 200px;
       border-radius: 5px;
     }
+    #login_logo {
+      background:rgba(255,255,255,0);
+      z-index: 9999;
+      position: absolute;
+      right: 30%;
+      top: 13%;
+    }
   }
-
+  
   @media screen and (max-width: 760px) {
     #login_footer {
       position:absolute;
@@ -85,6 +95,15 @@ export default Vue.extend({
       left: 50%;
       margin-left: -100px;
       border-radius: 5px;
+    }
+    #login_logo {
+      background:rgba(255,255,255,0);
+      position: absolute;
+      width: 200px;
+      left: 50%;
+      margin-left: -100px;
+      right: 30%;
+      top: 13%;
     }
   }
 </style>

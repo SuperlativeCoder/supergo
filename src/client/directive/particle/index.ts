@@ -26,14 +26,14 @@ export default class LogoParticle {
   public show() {
     const self = this
     this.image.onload = () => {
-      self.ctx.drawImage(this.image, 100, 100, 200, 200);
-      self.imageData = self.ctx.getImageData(100, 100, 200, 200);    // 获取图表像素信息
+      self.ctx.drawImage(this.image, 0, 0, 200, 200);
+      self.imageData = self.ctx.getImageData(0, 0, 200, 200);    // 获取图表像素信息
       self.getPixels();    // 获取所有像素
     }
   }
 
   public animal() {
-    this.ctx.clearRect(0, 0, 400, 400)
+    this.ctx.clearRect(0, 0, 200, 200)
     this.pixels.map(item => {
       this.ctx.fillStyle = 'rgba(255,255,255' + Math.random() * 255 + ')'
       this.ctx.fillRect(item.x, item.y, Math.random() * 2, Math.random() * 2)
@@ -43,14 +43,14 @@ export default class LogoParticle {
   private getPixels() {
     let pos: number = 0;
     const data = (this.imageData as ImageData).data;    // RGBA的一维数组数据
-    this.ctx.clearRect(0, 0, 400, 400);
+    this.ctx.clearRect(0, 0, 200, 200);
     // 源图像的高度和宽度为200px
     for (let i = 1; i <= 200; i++) {
       for (let j = 1; j <= 200; j++) {
         pos = ((i - 1) * 200 + (j - 1)) * 4 // 取得像素位置
         if (data[pos] > 0) {
-          const posX: number = 100 + j + Math.random() * 5
-          const posY: number = 100 + i + Math.random() * 5
+          const posX: number = j + Math.random() * 5 * (Math.random() > 0.5 ? -1 : 1)
+          const posY: number = i + Math.random() * 5 * (Math.random() > 0.5 ? -1 : 1)
           const pixel = {
             originX: posX,
             originY: posY,
