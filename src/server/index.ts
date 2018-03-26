@@ -13,15 +13,15 @@ const app = new Koa()
 app.use(logger())
 
 if (process.env.NODE_ENV === 'development') {
-  const config = require('../../build/lib/config/client/webpack.dev.conf')
+  const webpackConfig: any = require('../../build/lib/config/client/webpack.dev.conf')
   app.use(koaWebpack({
-      config: config,
+      config: webpackConfig,
       hot: { log: false, heartbeat: 2000 },
-      dev: { publicPath: '/', stats: 'none', logLevel: 'error' }
+      dev: { publicPath: '/', stats: 'none', logLevel: 'error' },
   }))
 }
-console.log(path.resolve(__dirname, '../..' ,'./dist/client'))
-app.use(koaStatic(path.resolve(__dirname, '../..' ,'./dist/client')))
+console.log(path.resolve(__dirname, '../..' , './dist/client'))
+app.use(koaStatic(path.resolve(__dirname, '../..' , './dist/client')))
 
 app.listen(process.env.port)
 console.log(`Server running on port ${ process.env.port }`)

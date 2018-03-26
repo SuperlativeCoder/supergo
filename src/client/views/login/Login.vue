@@ -3,7 +3,7 @@
     <canvas id="login_canvas"></canvas>
     <div id="login_wrap">
       <div id="content">
-        屏幕有多大，雪就有多大
+        <h3 style="color: white">住这儿</h3>以社区公共权益而生
       </div>
       <div id="form">
         <canvas id="login_logo" width="200" height="200"></canvas>
@@ -20,7 +20,7 @@
 import Vue from 'vue'
 import Loginbg from '@/client/directive/loginbg'
 import LogoParticle from '@/client/directive/particle'
-import { setInterval } from 'timers';
+import { setInterval } from 'timers'
 
 const logImg = require('../../assets/logo.png')
 
@@ -37,7 +37,7 @@ export default Vue.extend({
       particle.animal()
     }
     window.requestAnimationFrame(animation)
-    setInterval(particleAnimation, 100)
+    setInterval(particleAnimation, 90)
   }
 })
 </script>

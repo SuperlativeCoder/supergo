@@ -46,10 +46,6 @@ class Loginbg {
     canvasContext.fillRect(0, 0, this.canvasWidth, this.canvasHeight / 10 * 7)
   }
 
-  private createTrees(canvasContext: CanvasRenderingContext2D) { }
-
-  private createWave(canvasContext: CanvasRenderingContext2D) { }
-
   private createSnows(canvasContext: CanvasRenderingContext2D) {
     if (this.snows.length <= 0) {
       for (let i = 0; i < this.snowNum; i++) {
