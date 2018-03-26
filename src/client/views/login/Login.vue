@@ -6,7 +6,8 @@
         屏幕有多大，雪就有多大
       </div>
       <div id="form">
-        <canvas id="login_logo"></canvas>
+        <canvas id="login_logo" width="400" height="400" 
+          style="background:rgba(255,255,255,0);z-index: 9999;margin-left: 46%"></canvas>
         <a id="zzr_btn_0" href="#">助这儿登录</a>
       </div>
     </div>
@@ -19,12 +20,18 @@
 <script lang="ts">
 import Vue from 'vue'
 import Loginbg from '@/client/directive/loginbg'
+import LogoParticle from '@/client/directive/particle'
+
+const logImg = require('../../assets/logo.png')
 
 export default Vue.extend({
   mounted() {
     let loginbg = new Loginbg('login_canvas', window.innerWidth, window.innerHeight)
+    let particle = new LogoParticle('login_logo', logImg)
+    particle.show()
     function animation() {
       loginbg.show(window.innerWidth, window.innerHeight)
+      particle.animal()
       window.requestAnimationFrame(animation)
     }
     window.requestAnimationFrame(animation)
