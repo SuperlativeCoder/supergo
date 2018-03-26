@@ -1,15 +1,16 @@
-import Vue from 'vue';
-import Login from './views/login/Login.vue';
-import router from './config/router';
-import store from './config/store';
-import Alphaui from '@/alpha-ui'
+import Vue from 'vue'
+import Login from './views/login/Login.vue'
+import router from './config/router'
+import store from './config/store'
+import alphaui from '@/alpha-ui'
+import '@/alpha-ui/styles/index.sass'
 
 Vue.config.productionTip = false;
 
-Vue.use(Alphaui)
+Vue.use(alphaui)
 
 new Vue({
   router,
   store,
   render: h => h(Login),
-}).$mount('#app');
+}).$mount('#app')

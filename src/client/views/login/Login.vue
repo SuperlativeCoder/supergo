@@ -44,7 +44,7 @@ export default Vue.extend({
 
 <style>
   #login_canvas { position: absolute; top:0px; left:0px; z-index:-1; }
-  a { text-decoration: none }
+  
   @media screen and (min-width: 760px) {
     #login_footer { color: black; position:absolute; bottom: 10%; left: 100px }
     #content { color: white; position:absolute; top: 30%; left: 20%;font-size: 1.3em }
