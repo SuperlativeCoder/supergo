@@ -1,0 +1,38 @@
+@import '../mixins/mixins.scss';
+@import '../mixins/utils.scss';
+
+@include block(image) {
+  display: block;
+  margin: auto;
+
+  @include nest(btn-area) {
+    z-index: 1;
+    position: relative;
+    top: -40px;
+  }
+
+  @include nest(mask) {
+    z-index: $--z-index-float;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    left: 0px;  
+    top: 0px;  
+    right: 0px;  
+    bottom: 0px; 
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items:center;
+
+    img {
+      margin: auto;
+    }
+
+    @include impl(btn-area) {
+      z-index: $--z-index-float + 1;
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+    }
+  }
+}

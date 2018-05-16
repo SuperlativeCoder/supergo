@@ -1,0 +1,18 @@
+<template>
+  <div :class="classes">
+
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+import { Component } from 'vue-property-decorator'
+
+@Component
+export default class FormItem extends Vue {
+  get classes() {
+    return []
+  }
+}
+</script>
+

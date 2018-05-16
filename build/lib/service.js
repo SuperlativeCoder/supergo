@@ -25,7 +25,7 @@ module.exports = class Service {
     this.plugins = this.resolvePlugins(plugins, useBuiltIn)
     this.plugins.forEach(({id, apply}) => {
       apply(new Api(id, this), this.projectOptions)
-    });
+    })
   }
 
   run(name, args = {}, rawArgv = []) {

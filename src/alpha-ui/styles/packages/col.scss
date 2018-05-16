@@ -1,0 +1,159 @@
+@import '../theme/var.scss';
+@import '../mixins/mixins.scss';
+
+@include block(col) {
+  position: relative;
+  display: block;
+
+  @for $i from 0 through $--grid-columns {
+    @include nest(order-#{$i}) {
+      order: #{$i};
+    }
+    @include nest(span-#{$i}) {
+      width: (1 / $--grid-columns * $i * 100) * 1%;
+    }
+    @include nest(offset-#{$i}) {
+      margin-left: (1 / $--grid-columns * $i * 100) * 1%;
+    }
+    @include nest(pull-#{$i}) {
+      position: relative;
+      right: (1 / $--grid-columns * $i * 100) * 1%;
+    }
+    @include nest(push-#{$i}) {
+      position: relative;
+      left: (1 / $--grid-columns * $i * 100) * 1%;
+    }
+  }
+
+  @include res(xs) {
+    @for $i from 0 through $--grid-columns {
+      @include nest(xs-order-#{$i}) {
+        order: #{$i};
+      }
+      @include nest(xs-span-#{$i}) {
+        width: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xs-offset-#{$i}) {
+        margin-left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xs-pull-#{$i}) {
+        position: relative;
+        right: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xs-push-#{$i}) {
+        position: relative;
+        left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+    }
+  }
+
+  @include res(sm) {
+    @for $i from 0 through $--grid-columns {
+      @include nest(sm-order-#{$i}) {
+        order: #{$i};
+      }
+      @include nest(sm-span-#{$i}) {
+        width: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(sm-offset-#{$i}) {
+        margin-left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(sm-pull-#{$i}) {
+        position: relative;
+        right: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(sm-push-#{$i}) {
+        position: relative;
+        left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+    }
+  }
+
+  @include res(md) {
+    @for $i from 0 through $--grid-columns {
+      @include nest(md-order-#{$i}) {
+        order: #{$i};
+      }
+      @include nest(md-span-#{$i}) {
+        width: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(md-offset-#{$i}) {
+        margin-left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(md-pull-#{$i}) {
+        position: relative;
+        right: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(md-push-#{$i}) {
+        position: relative;
+        left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+    }
+  }
+
+  @include res(lg) {
+    @for $i from 0 through $--grid-columns {
+      @include nest(lg-order-#{$i}) {
+        order: #{$i};
+      }
+      @include nest(lg-span-#{$i}) {
+        width: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(lg-offset-#{$i}) {
+        margin-left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(lg-pull-#{$i}) {
+        position: relative;
+        right: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(lg-push-#{$i}) {
+        position: relative;
+        left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+    }
+  }
+
+  @include res(xs) {
+    @for $i from 0 through $--grid-columns {
+      @include nest(xl-order-#{$i}) {
+        order: #{$i};
+      }
+      @include nest(xl-span-#{$i}) {
+        width: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xl-offset-#{$i}) {
+        margin-left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xl-pull-#{$i}) {
+        position: relative;
+        right: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xl-push-#{$i}) {
+        position: relative;
+        left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+    }
+  }
+
+  @include res(xxl) {
+    @for $i from 0 through $--grid-columns {
+      @include nest(xxl-order-#{$i}) {
+        order: #{$i};
+      }
+      @include nest(xxl-span-#{$i}) {
+        width: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xxl-offset-#{$i}) {
+        margin-left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xxl-pull-#{$i}) {
+        position: relative;
+        right: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+      @include nest(xxl-push-#{$i}) {
+        position: relative;
+        left: (1 / $--grid-columns * $i * 100) * 1%;
+      }
+    }
+  }
+}

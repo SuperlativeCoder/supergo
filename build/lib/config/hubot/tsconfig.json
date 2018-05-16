@@ -1,18 +1,24 @@
 {
   "extends": "../../../../tsconfig",
   "compilerOptions": {
-      "rootDir": "../../../../src/scripts",
-      "outDir": "../../../../scripts"
+    "rootDir": "../../../../src/scripts",
+    "outDir": "../../../../scripts"
   },
   "include": [
-      "../../../../src/scripts/**/*",
-      "../../../../typings/**/*"
+    "../../../../src/scripts/**/*",
+    "../../../../typings/hubot.d.ts"
   ],
   "exclude": [
-      "../../../../node_modules",
-      "../../../../build",
-      "../../../../dist",
-      "../../../../scripts",
-      "../../../../test"
+    "../../../../src/client",
+    "../../../../src/server",
+    "../../../../src/include",
+    "../../../../src/alpha-ui",
+    "../../../../src/alpha-motion",
+    "../../../../src/alpha-charts",
+    "../../../../node_modules",
+    "../../../../build",
+    "../../../../dist",
+    "../../../../scripts",
+    "../../../../test"
   ]
 }

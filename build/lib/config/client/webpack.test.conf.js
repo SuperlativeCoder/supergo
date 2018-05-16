@@ -25,16 +25,16 @@ module.exports = merge(baseConfig, {
   devtool: config.client.test.productionSourceMap ? '#source-map' : false,
   output: {
     path: resolve('./dist/client/'),
-    filename: config.client.test.assetsSubDirectory + '/js/[name].[chunkhash].js',
-    chunkFilename: utils.assetsPath(config.client.test.assetsSubDirectory + '/js/[id].[chunkhash].js'),
-    publicPath: config.client.test.assetsPublicPath
+    filename: config.client.test.assetsSubDirectory + '/js/[name].[hash:7].js',
+    chunkFilename: utils.assetsPath(config.client.test.assetsSubDirectory + '/js/[id].[hash:7].js'),
+    publicPath: '/'
   },
   plugins: [
     new webpack.DefinePlugin({
         'process.env': config.client.test.env
     }),
     new HtmlWebpackPlugin({
-      filename: resolve('./dist/client/index.html'),
+      filename: resolve('./dist/client/manager/index.html'),
       template: resolve('./public/index.html'),
       inject: true,
       minify: {
@@ -45,7 +45,7 @@ module.exports = merge(baseConfig, {
       chunksSortMode: 'dependency'
     }),
     new ExtractTextPlugin({
-      filename: config.client.test.assetsSubDirectory + '/css/[name].[contenthash].css'
+      filename: config.client.test.assetsSubDirectory + '/css/[name].[hash:7].css'
     }),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
@@ -55,7 +55,7 @@ module.exports = merge(baseConfig, {
     new CopyWebpackPlugin([
       {
         from: resolve('./public'),
-        to: resolve('./dist/client'),
+        to: resolve('./dist/client/manager/'),
         ignore: ['.*']
       }
     ]),

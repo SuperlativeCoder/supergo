@@ -57,6 +57,7 @@ module.exports = (api, options) => {
           }
         }
       }
+      console.log(label)
     }
     return label
   }

@@ -1,0 +1,50 @@
+@import '../mixins/mixins.scss';
+@import '../mixins/utils.scss';
+
+@include block(row) {
+  display: block;
+  position: relative;
+  height: auto;
+  @include utils-clearfix;
+
+  @include nest(flex) {
+    display: flex;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    @include impl(justify-start) {
+      justify-content: flex-start;
+    }
+
+    @include impl(justify-center) {
+      justify-content: center;
+    }
+
+    @include impl(justify-end) {
+      justify-content: flex-end;
+    }
+
+    @include impl(justify-space-between) {
+      justify-content: space-between;
+    }
+
+    @include impl(justify-space-around) {
+      justify-content: space-around;
+    }
+
+    @include impl(align-top) {
+      align-items: flex-start;
+    }
+
+    @include impl(align-middle) {
+      align-items: center;
+    }
+
+    @include impl(align-bottom) {
+      align-items: flex-end;
+    }
+  }
+}

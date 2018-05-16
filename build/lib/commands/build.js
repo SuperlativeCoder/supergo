@@ -8,6 +8,7 @@ const testClientWebpackConfig = require('../config/client/webpack.test.conf')
 const prodClientWebpackConfig = require('../config/client/webpack.prod.conf')
 const testServerWebpackconfig = require('../config/server/webpack.test.conf')
 const prodServerWebpackConfig = require('../config/server/webpack.prod.conf')
+const docWebpackConfig = require('../config/docs/webpack.prod.conf')
 
 module.exports = (api, options) => {
   api.registerCommand('build', {
@@ -15,8 +16,9 @@ module.exports = (api, options) => {
     usage: 'supergo-service build [options]',
     options: {
       '--hubot': `build hubot server`,
-      '--test': `build test server`,
-      '--prod': `build prod server`
+      '--test' : `build test server`,
+      '--prod' : `build prod server`,
+      '--docs' : `build docs`  
     }
   }, args => {
     const command = args._[0]
@@ -26,8 +28,10 @@ module.exports = (api, options) => {
       buildByWebpack('test client', testClientWebpackConfig)
       buildByWebpack('test server', testServerWebpackconfig)
     } else if (args.prod) {
-      buildByWebpack('test client', prodClientWebpackConfig)
+      buildByWebpack('prod client', prodClientWebpackConfig)
       buildByWebpack('prod server', prodServerWebpackConfig)
+    } else if (args.docs) {
+      buildByWebpack('docs', docWebpackConfig)
     }
   })
 

@@ -7,7 +7,7 @@ exports.aesEncrypt = (password, source) => {
     let clearEncoding = 'utf-8'
     let cipherEncoding = 'hex'
     let cipherChunks = []
-    let cipher = crypto.createCipher(method, password)
+    let cipher = crypto.createCipher('aes-256-ecb', password)
     cipher.setAutoPadding(true)
     cipherChunks.push(cipher.update(source, clearEncoding, cipherEncoding))
     cipherChunks.push(cipher.final(cipherEncoding))
@@ -18,14 +18,14 @@ exports.aesDecrypt = (password, source) => {
     if (!source) {
         return ''
     }
-    let clearEncoding = 'utf8';
-    let cipherEncoding = 'hex';
-    let cipherChunks = [];
-    let decipher = crypto.createDecipher('aes-256-ecb', password);
-    decipher.setAutoPadding(true);
-    cipherChunks.push(decipher.update(source, cipherEncoding, clearEncoding));
-    cipherChunks.push(decipher.final(clearEncoding));
-    return cipherChunks.join('');
+    let clearEncoding = 'utf8'
+    let cipherEncoding = 'hex'
+    let cipherChunks = []
+    let decipher = crypto.createDecipher('aes-256-ecb', password)
+    decipher.setAutoPadding(true)
+    cipherChunks.push(decipher.update(source, cipherEncoding, clearEncoding))
+    cipherChunks.push(decipher.final(clearEncoding))
+    return cipherChunks.join('')
 }
 
 

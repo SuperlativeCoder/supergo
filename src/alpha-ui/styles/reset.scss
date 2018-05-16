@@ -4,8 +4,7 @@
 html {
   color: #333;
   background: #fff;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   text-rendering: optimizelegibility;
 }
 
@@ -127,10 +126,12 @@ sub {
 /* 让链接在 hover 状态下显示下划线 */
 a {
   color: #1abc9c;
+  cursor: pointer;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .typo a {
@@ -241,7 +242,7 @@ strong, b {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
-  font-weight: 100;
+  font-weight: bold;
   color: #000;
   line-height: 1.35;
 }
@@ -315,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* 去除 webkit 中 input 和 textarea 的默认样式  */
 .typo-input, .typo-textarea {
-  -webkit-appearance: none;
+  appearance: none;
   border-radius: 0;
 }
 

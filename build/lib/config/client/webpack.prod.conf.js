@@ -25,8 +25,8 @@ module.exports = merge(baseConfig, {
   devtool: config.client.prod.productionSourceMap ? '#source-map' : false,
   output: {
     path: resolve('./dist/client/'),
-    filename: config.client.prod.assetsSubDirectory + '/js/[name].[chunkhash].js',
-    chunkFilename: utils.assetsPath(config.client.prod.assetsSubDirectory + '/js/[id].[chunkhash].js'),
+    filename: config.client.prod.assetsSubDirectory + '/js/[name].[hash].js',
+    chunkFilename: utils.assetsPath(config.client.prod.assetsSubDirectory + '/js/[id].[hash].js'),
     publicPath: '/'
   },
   plugins: [
@@ -34,14 +34,9 @@ module.exports = merge(baseConfig, {
         'process.env': config.client.prod.env
     }),
     new HtmlWebpackPlugin({
-      filename: resolve('./dist/client/index.html'),
+      filename: resolve('./dist/client/manager/index.html'),
       template: resolve('./public/index.html'),
       inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-      },
       chunksSortMode: 'dependency'
     }),
     new ExtractTextPlugin({
@@ -55,7 +50,7 @@ module.exports = merge(baseConfig, {
     new CopyWebpackPlugin([
       {
         from: resolve('./public'),
-        to: resolve('./dist/client'),
+        to: resolve('./dist/client/manager/'),
         ignore: ['.*']
       }
     ]),

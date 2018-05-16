@@ -1,0 +1,10 @@
+@import '../mixins/mixins';
+
+@include block(content) {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+}

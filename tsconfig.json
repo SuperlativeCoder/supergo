@@ -17,7 +17,8 @@
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "src/*",
+        "docs/src/*"
       ]
     }
   },
@@ -25,6 +26,8 @@
     "src/**/*.ts",
     "src/client/**/*.ts",
     "src/client/**/*.vue",
+    "docs/src/**/*.ts",
+    "docs/src/**/*.vue",
     "test/**/*.ts",
     "typings/**/*.ts"
   ],

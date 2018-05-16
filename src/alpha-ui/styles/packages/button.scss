@@ -1,0 +1,147 @@
+@import '../mixins/mixins.scss';
+@import '../mixins/utils.scss';
+
+@include block(button) {
+  display: inline-block;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  outline: none;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-image: none;
+
+  padding: 7px 12px;
+  font-size: 13px;
+  border-radius: 7px;
+  .vs-icon { font-size: 14px; }
+
+  font-weight: bolder;
+  color: $--color-primary;
+  border: solid 1px $--color-primary;
+
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @include nest(size) {
+    @include impl(mini) {
+      padding: 3px 3px;
+      font-size: 11px;
+      border-radius: 3px;
+      .vs-icon { font-size: 14px; }
+    }
+
+    @include impl(small) {
+      padding: 5px 7px;
+      font-size: 12px;
+      border-radius: 5px;
+      .vs-icon { font-size: 14px; }
+    }
+
+    @include impl(default) {
+      padding: 7px 12px;
+      font-size: 13px;
+      border-radius: 7px;
+      .vs-icon { font-size: 14px; }
+    }
+
+    @include impl(large) {
+      padding: 9px 16px;
+      font-size: 14px;
+      border-radius: 9px;
+      .vs-icon { font-size: 14px; }
+    }
+  }
+
+  @include nest(type) {
+    @include impl(primary) {
+      color: white;
+      border: $--color-primary;
+      background-color: $--color-primary;
+    }
+
+    @include impl(ghost) {
+      color: black;
+      border: #eeeeee;
+      border: solid 1px #eeeeee;
+    }
+
+    @include impl(text) {
+      color: black;
+      border: none;
+      background-color: none;
+    }
+
+    @include impl(info) {
+      color: white;
+      border: $--color-info;
+      background-color: $--color-info;
+    }
+
+    @include impl(success) {
+      color: white;
+      border: $--color-success;
+      background-color: $--color-success;
+    }
+
+    @include impl(warning) {
+      color: white;
+      border: $--color-warning;
+      background-color: $--color-warning;
+    }
+
+    @include impl(error) {
+      color: white;
+      border: $--color-error;
+      background-color: $--color-error;
+    }
+  }
+
+  @include nest(shape) {
+    @include impl(circle) {
+      border-radius: 45px;
+    }
+
+    @include impl(round) {
+      border-radius: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  @include impl(long) {
+    width: 100%;
+  }
+
+  @include impl(disabled) {
+    color: rgba(0,0,0,.25);
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    cursor: not-allowed;
+    
+    &:hover {
+      color: rgba(0,0,0,.25);
+      background-color: #f5f5f5;
+      border-color: #d9d9d9;
+      cursor: not-allowed;
+      opacity: 1;
+    }
+  }
+
+  @include nest(loading) {
+
+  }
+
+  @include nest(icon-only) {
+    
+  }
+}

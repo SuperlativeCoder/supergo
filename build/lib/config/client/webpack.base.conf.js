@@ -69,7 +69,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 1000,
-          name: 'static/img/[name].[hash:8].[ext]'
+          name: 'manager/static/img/[name].[hash:8].[ext]'
         }
       },
       {
@@ -77,7 +77,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           limit: 1000,
-          name: 'static/img/[name].[hash:8].[ext]'
+          name: 'manager/static/img/[name].[hash:8].[ext]'
         }
       },
       {
@@ -85,7 +85,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 1000,
-          name: 'static/media/[name].[hash:8].[ext]'
+          name: 'manager/static/media/[name].[hash:8].[ext]'
         }
       },
       {
@@ -93,7 +93,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 1000,
-          name: 'static/fonts/[name].[hash:8].[ext]'
+          name: 'manager/static/fonts/[name].[hash:8].[ext]'
         }
       }
     ]

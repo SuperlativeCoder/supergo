@@ -1,0 +1,69 @@
+@import '../mixins/mixins.scss';
+@import '../mixins/utils.scss';
+
+@include block(tag) {
+  display: inline-block;
+  font-size: 13px;
+  padding: 0px 12px;
+  border-radius: 3px;
+  border: solid 1px black;
+  color: black;
+  font-weight: 400;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+
+  @include nest(size) {
+    @include impl(large) {
+      font-size: 14px;
+    }
+
+    @include impl(small) {
+      font-size: 12px;
+    }
+
+    @include impl(mini) {
+      webkit-transform-origin-x: 0;
+      -webkit-transform: scale(0.90);
+      font-size:10.8px;
+    }
+  }
+
+  @include nest(type) {
+    @include impl(primary) {
+      color: #FFF;
+      background-color: $--color-primary;
+      border: solid 1px $--color-primary;
+    }
+
+    @include impl(success) {
+      color: $--color-success;
+      background-color: $--color-alert-success;
+      border: solid 1px $--color-success;
+    }
+
+    @include impl(info) {
+      color: $--color-info;
+      background-color: $--color-alert-info;
+      border: solid 1px $--color-info;
+    }
+
+    @include impl(warning) {
+      color: $--color-warning;
+      background-color: $--color-alert-warning;
+      border: solid 1px $--color-warning;
+    }
+
+    @include impl(error) {
+      color: $--color-error;
+      background-color: $--color-alert-error;
+      border: solid 1px $--color-error;
+    }
+  }
+
+  @include nest(no-border) {
+    padding: 1px 11px;
+    border: none;
+  }
+}

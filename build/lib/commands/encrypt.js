@@ -4,7 +4,7 @@ const { aesEncrypt } = require('../util/crytolib')
 
 module.exports = (api, options) => {
     api.registerCommand('encrypt', {
-        description: 'encrypt default AES256',
+        description: 'encrypt default aes-256-ecb',
         usage: 'supergo-service encrypt ...',
         options: {
             '-p': `password`,

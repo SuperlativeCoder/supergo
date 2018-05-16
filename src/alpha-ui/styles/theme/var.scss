@@ -1,0 +1,62 @@
+/* Grid */
+$--grid-columns: 24;
+
+/* Color */
+$--color-primary: #5a79ba !default;
+$--color-success: #80b692 !default;
+$--color-warning: #fdaf3c !default;
+$--color-danger: #eb5b58 !default;
+$--color-error: #eb5b58 !default;
+$--color-info: #979797 !default;
+
+$--color-alert-success: #b3d3be !default;
+$--color-alert-info: rgb(221, 221, 221) !default;
+$--color-alert-error: #faacab !default;
+$--color-alert-warning: rgb(238, 210, 169) !default;
+
+/* Breakpoint */
+$--sm:   576px !default;
+$--md:   768px !default;
+$--lg:   992px !default;
+$--xl:   1200px !default;
+$--xxl:  1600px !default;
+
+$--breakpoints: (
+  'xs' : "max-width: #{$--sm}",
+  'sm' : "min-width: #{$--sm}",
+  'md' : "min-width: #{$--md}",
+  'lg' : "min-width: #{$--lg}",
+  'xl' : "min-width: #{$--xl}",
+  'xxl': "min-width: #{$--xxl}"
+);
+
+$--breakpoints-spec: (
+  'xs-only' : (max-width: $--sm - 1),
+  'sm-and-up' : (min-width: $--sm),
+  'sm-only': "(min-width: #{$--sm}) and (max-width: #{$--md} - 1)",
+  'sm-and-down': (max-width: $--md - 1),
+  'md-and-up' : (min-width: $--md),
+  'md-only': "(min-width: #{$--md}) and (max-width: #{$--lg} - 1)",
+  'md-and-down': (max-width: $--lg - 1),
+  'lg-and-up' : (min-width: $--lg),
+  'lg-only': "(min-width: #{$--lg}) and (max-width: #{$--xl} - 1)",
+  'lg-and-down': (max-width: $--xl - 1),
+  'xl-and-up': (min-width: $--xl),
+  'xl-only' : "(min-width: #{$--xl}) and (max-width: #{$--lg} - 1",
+  'xl-and-down': (max-width: $--xl - 1),
+  'xxl-only': (min-width: $--xxl)
+);
+
+/* Z-index */
+$--z-index-content:      0000 !default; // 内容层
+$--z-index-float:        1111 !default; // 浮动层
+$--z-index-tip:          5555 !default; // 提示层
+$--z-index-alert:        6666 !default; // 短消息层
+$--z-index-message:      7777 !default; // 普通消息层
+$--z-index-notification: 8888 !default; // 系统消息层
+$--z-index-loading:      9999 !default; // 加载动画层
+
+/* Avatar */
+$--avatar-size-small:    20px;
+$--avatar-size-normal:   30px;
+$--avatar-size-large:    40px;

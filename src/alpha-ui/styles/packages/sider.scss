@@ -1,0 +1,14 @@
+@import '../mixins/mixins';
+
+@include block(sider) {
+  min-width: 200px;
+  height: 100%;
+
+  @include impl(left) {
+    float: left
+  }
+
+  @include impl(right) {
+    float: right;
+  }
+}

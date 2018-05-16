@@ -1,0 +1,21 @@
+.vs-top {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 10px;
+  font-weight: bold;
+  border-bottom: solid 1px #999999;
+  z-index: 999999;
+  
+  .vs-top-main {
+    padding: 0 10px 0 10px
+  }
+
+  .vs-top-left {
+    float: left;
+  }
+
+  .vs-top-right {
+    float: right;
+  }
+}

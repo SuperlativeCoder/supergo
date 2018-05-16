@@ -1,0 +1,68 @@
+@import '../mixins/mixins.scss';
+@import '../mixins/utils.scss';
+
+@include block(alert) {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+
+  @include nest(align) {
+    @include impl(center) {
+      text-align: center;
+    }
+  }
+
+  @include nest(left) {
+    float: left;
+    margin-left: 15px;
+
+    label {
+      display: inline-block;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    span {
+      font-weight: normal;
+      font-size: 13px;
+    }
+  }
+
+  @include nest(right) {
+    float: right;
+    margin-right: 15px;
+    color: #aaaaaa;
+
+    &:hover {
+      color: #999999;
+    }
+  }
+
+  @include nest(type) {
+    @include impl(success) {
+      color: $--color-success;
+      background-color: $--color-alert-success;
+    }
+
+    @include impl(info) {
+      color: $--color-info;
+      background-color: $--color-alert-info;
+    }
+
+    @include impl(warning) {
+      color: $--color-warning;
+      background-color: $--color-alert-warning;
+    }
+
+    @include impl(error) {
+      color: $--color-error;
+      background-color: $--color-alert-error;
+    }
+  }
+}
