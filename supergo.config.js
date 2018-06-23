@@ -6,7 +6,7 @@ module.exports = {
     name: 'supergo',
     port: 8081,
     hubot_slack_token: '"encrypt:b10d4a1895617193900f10610459d4b082942f061a13a272040c5d799f4ec61135ac991480375a66c174bb84137f89fb"',
-    hubot_jenkins_url: 'http://10.0.73.95:8080/',
+    hubot_jenkins_url: 'http://*.*.*.*:8080/',
     hubot_jenkins_auth: '"encrypt:71ebd42c291e803e83e1b52004dc816f78be961d7b1f2211353781a935c49c18"'
   },
   client: {
