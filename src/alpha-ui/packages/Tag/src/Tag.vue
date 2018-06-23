@@ -1,15 +1,27 @@
 <template>
-  <div :class="classes" :style="{ color: colorText, backgroundColor: color,borderStyle: borderStyle }">
+  <div :class="classes" 
+    v-show="visable"
+    :style="{ color: colorText, backgroundColor: color,borderStyle: borderStyle }">
     <slot></slot>
+    <a @click="handleClose"
+      v-show="closable"
+      style="margin-left: 5px; cursor: pointer; color: rgba(0,0,0, 0.3)">
+      <vs-Icon type="android-close" size="14px"></vs-Icon>
+    </a>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { Component, Prop } from 'vue-property-decorator';
-import Utils from '@/alpha-ui/utils/Utils';
+import { Component, Prop } from 'vue-property-decorator'
+import Icon from '../../Icon'
+import Utils from '@/alpha-ui/utils/Utils'
 
-@Component
+@Component({
+  components: {
+    Icon,
+  }
+})
 export default class Tag extends Vue {
   @Prop({ type: String, validator: function(value){
     return Utils.oneOfProp(value, ['primary', 'success', 'info', 'warning', 'error'])
@@ -38,6 +50,8 @@ export default class Tag extends Vue {
   @Prop({ type: Boolean, default: false })
   closable: boolean | undefined
 
+  visable: boolean = true
+
   get classes() {
     return [
       `vs-tag`,
@@ -47,6 +61,11 @@ export default class Tag extends Vue {
         [`vs-tag-no-border`]: !this.border,
       }
     ]
+  }
+
+  handleClose(event: any) {
+    this.visable = false
+    this.$emit('click', event)
   }
 }
 </script>

@@ -17,11 +17,9 @@
         text-align: center;
     }
 </style>
-## Mantle 文档中心
+## Supergo 文档中心
 
 > 欢迎使用
-> From: 住这儿-平台组 <a href="https://github.com/Vankeservice/mantle"><vs-Icon type="social-github" size="21px"></vs-Icon></a>
-
 > 🧐 感受技术进步之美好 
 > 🚀 Make web great again 
 

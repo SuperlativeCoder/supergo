@@ -75,11 +75,11 @@ export default class Notify extends Vue {
 
   get icons() {
     switch(this.type) {
-      case 'success': return 'checkmark-circled';
-      case 'info': return 'information-circled';
-      case 'warning': return 'android-warning';
-      case 'error': return 'close-circled';
-      default: return 'information-circled';
+      case 'success': return 'checkmark-circled'
+      case 'info': return 'information-circled'
+      case 'warning': return 'android-warning'
+      case 'error': return 'close-circled'
+      default: return 'information-circled'
     }
   }
 

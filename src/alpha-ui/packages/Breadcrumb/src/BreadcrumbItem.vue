@@ -1,9 +1,9 @@
 <template>
   <span>
-    <a v-if="href" :class="linkclasses">
+    <router-link v-if="!!to" :class="linkclasses" :to="to">
       <Icon :type="icon" v-if="icon"></Icon>
       <span><slot></slot></span>
-    </a>
+    </router-link>
     <span v-else :class="linkclasses">
       <Icon :type="icon" v-if="icon"></Icon>
       <span><slot></slot></span>
@@ -18,7 +18,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import Icon from '../../Icon'
-import { Component, Prop } from 'vue-property-decorator';
+import { Component, Prop } from 'vue-property-decorator'
 
 @Component({
   components: {
@@ -29,8 +29,8 @@ export default class BreadcrumbItem extends Vue {
   @Prop({ type: String })
   icon: string | undefined
 
-  @Prop({ type: String })
-  href: string | undefined
+  @Prop({ type: Object })
+  to: object | undefined
 
   showSeparator: boolean = false
   separator: string = ''

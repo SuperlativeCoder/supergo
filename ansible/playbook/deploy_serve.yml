@@ -15,10 +15,4 @@
         --name {{ server_name }} -p {{ server_port }}:8082 
         -d {{ registry }}/{{ server_name }}:{{ version }} 
         bash -c 'node ./dist/server/main.min.js'
-
-    - name: check uri
-      uri:
-        url: http://localhost:{{ server_port }}/ping
-        method: GET
-        timeout: 30
         

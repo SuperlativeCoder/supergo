@@ -15,6 +15,7 @@ Vue.config.productionTip = false
 Vue.component('vs-SourceBlock', SourceBlock)
 
 Vue.use(alphaui)
+
 new Vue({
   router,
   render: h => h(App),

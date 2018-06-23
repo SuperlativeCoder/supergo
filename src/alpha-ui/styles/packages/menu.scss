@@ -1,0 +1,88 @@
+@import '../mixins/mixins.scss';
+@import '../mixins/utils.scss';
+
+@include block(menu) {
+  font-weight: 400;
+  border-right: solid 1px #e6e6e6;
+  height: 100%;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  overflow: hidden;
+  @include utils-clearfix;
+}
+
+@include block(sub-menu) {
+  @include nest(title) {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 56px;
+    line-height: 56px;
+    text-align: left;
+
+    .vs-sub-menu-title-icon {
+      position: relative;
+      margin-top: -7px;
+      font-size: 13px;
+      top: 50%;
+      float: right;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:hover {
+      background-color: rgb(221, 221, 221);
+      cursor: pointer;
+    }
+
+    @include impl(disabled) {
+      color: #979797;
+
+      &:hover {
+        background-color: #FFF;
+        cursor: not-allowed;
+      }
+    }
+
+    @include impl(opened) {
+      & .vs-sub-menu-title-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@include block(menu-group) {
+  display: block;
+  text-align: left;
+  padding-left: 20px;
+
+  @include nest(title) {
+    font-size: 12px;
+    line-height: 35px;
+    height: 35px;
+    color: #898989;
+  }
+}
+
+@include block(menu-item) {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  height: 56px;
+  line-height: 56px;
+
+  &:hover {
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+  }
+
+  @include impl(disabled) {
+    color: #979797;
+
+    &:hover {
+      background-color: #FFF;
+      cursor: not-allowed;
+    }
+  }
+}

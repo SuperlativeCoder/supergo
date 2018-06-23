@@ -38,27 +38,27 @@
     }
 
     @include impl(success) {
-      color: $--color-success;
-      background-color: $--color-alert-success;
-      border: solid 1px $--color-success;
+      color: #67c23a;
+      background-color: #f0f9eb;
+      border: solid 1px #67c23a;
     }
 
     @include impl(info) {
-      color: $--color-info;
-      background-color: $--color-alert-info;
-      border: solid 1px $--color-info;
+      color: #909399;
+      background-color: #f4f4f5;
+      border: solid 1px #909399;
     }
 
     @include impl(warning) {
-      color: $--color-warning;
-      background-color: $--color-alert-warning;
-      border: solid 1px $--color-warning;
+      color: #e6a23c;
+      background-color: #fdf6ec;
+      border: solid 1px #e6a23c;
     }
 
     @include impl(error) {
-      color: $--color-error;
-      background-color: $--color-alert-error;
-      border: solid 1px $--color-error;
+      color: #f56c6c;
+      background-color: #fef0f0;
+      border: solid 1px #f56c6c;
     }
   }
 

@@ -1,3 +1,3 @@
-import Notify from './src/Notify.vue'
+import Notify from './src/main'
 
 export default Notify

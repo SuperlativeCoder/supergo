@@ -36,6 +36,7 @@ import Table from '../../../src/alpha-ui/packages/Table/doc/zh-CN/Table.md'
 import Step from '../../../src/alpha-ui/packages/Step/doc/zh-CN/Step.md'
 import Tag from '../../../src/alpha-ui/packages/Tag/doc/zh-CN/Tag.md'
 import Loading from '../../../src/alpha-ui/packages/Loading/doc/zh-CN/Loading.md'
+import Lottie from '../../../src/alpha-ui/packages/Lottie/doc/zh-CN/Lottie.md'
 
 Vue.use(Router)
 
@@ -82,6 +83,7 @@ const router = new Router({
         { path: '/popover', name: 'Popover 气泡提示', component: Popover, meta: 'notice' },
         { path: '/avatar', name: 'Avatar 头像', component: Avatar, meta: 'others' },
         { path: '/loading', name: 'Loading 加载动画', component: Loading, meta: 'others' },
+        { path: '/lottie', name: 'Lottie 动画', component: Lottie, meta: 'others' },
       ],
     },
   ],

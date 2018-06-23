@@ -1,11 +1,11 @@
 <template>
   <header class="vs-header">
     <div class="vs-header-main">
-      <div class="vs-header-logo">
+      <div class="vs-header-logo" @click="handleClick">
         <slot name="logo">
           <img src="../../../assets/logo.png" width="40" height="40px" style="margin-top: 10px;float: left"/>
         </slot>
-        <span style="float: left;margin-left: 10px;font-size: 18px;">{{ name }}</span>
+        <span style="float: left;margin-left: 10px;font-size: 18px;">{{ title }}</span>
       </div>
       <div class="vs-header-right">
         <slot name="right"></slot>
@@ -21,10 +21,15 @@ import { Prop } from 'vue-property-decorator'
 
 @Component
 export default class Header extends Vue {
+
   @Prop({ type: String, default: 'default value' })
   logo: string | undefined
   @Prop({ type: String, default: '管理后台' })
-  name: string | undefined
+  title: string | undefined
+
+  handleClick(event: any) {
+    this.$emit('click-icon', event)
+  }
 }
 </script>
 

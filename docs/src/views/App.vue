@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Component } from 'vue-property-decorator';
+import { Component } from 'vue-property-decorator'
 
 @Component
 export default class App extends Vue {
@@ -24,7 +24,7 @@ export default class App extends Vue {
   // 文档页面整体架构scss，不再另开
   body { min-width: 1300px; }
   .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
+    transition: opacity .3s;
   }
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;

@@ -34,7 +34,7 @@ import Vue from 'vue'
 import Icon from '../../Icon'
 import { Button, ButtonGroup } from '../../Button'
 import { Component, Prop } from 'vue-property-decorator'
-import Utils from '@/alpha-ui/utils/Utils';
+import Utils from '@/alpha-ui/utils/Utils'
 
 @Component({
   components: {

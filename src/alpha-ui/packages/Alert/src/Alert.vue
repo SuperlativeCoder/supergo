@@ -16,8 +16,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Component, Prop } from 'vue-property-decorator';
-import Utils from '@/alpha-ui/utils/Utils';
+import { Component, Prop } from 'vue-property-decorator'
+import Utils from '@/alpha-ui/utils/Utils'
 
 @Component
 export default class Alert extends Vue {
@@ -48,11 +48,11 @@ export default class Alert extends Vue {
 
   get icons() {
     switch(this.type) {
-      case 'success': return 'checkmark-circled';
-      case 'info': return 'information-circled';
-      case 'warning': return 'android-warning';
-      case 'error': return 'close-circled';
-      default: return 'information-circled';
+      case 'success': return 'checkmark-circled'
+      case 'info': return 'information-circled'
+      case 'warning': return 'android-warning'
+      case 'error': return 'close-circled'
+      default: return 'information-circled'
     }
   }
 

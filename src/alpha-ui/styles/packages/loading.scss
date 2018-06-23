@@ -1,0 +1,64 @@
+@import '../mixins/mixins.scss';
+@import '../mixins/utils.scss';
+
+@include block(loading) {
+  ul {
+    display: inline-block;
+  }
+  
+  ul li {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  @include nest(item) {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    animation: circlemove 2.4s infinite ease-in-out;
+    
+    &-1 {
+      background-color: #faacab;
+      animation-delay: -1.1s;
+    }
+  
+    &-2 {
+      background-color: #fdbe63;
+      animation-delay: -1s;
+    }
+  
+    &-3 {
+      background-color: #7b94c8;
+      animation-delay: -0.9s;
+    }
+  
+    &-4 {
+      background-color: #99c5a8;
+      animation-delay: -0.8s;
+    }
+  }
+  
+  @keyframes circlemove {
+    25% { transform: translateY(-18px) }
+    50% { transform: translateY(18px) }
+    75% { transform: translateY(18px) }
+    100% { transform: translateY(-18px) }
+  }
+  
+  @include nest(mask) {
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    left: 0px;
+    top: 0px;  
+    right: 0px;  
+    bottom: 0px; 
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items:center;
+  }
+}

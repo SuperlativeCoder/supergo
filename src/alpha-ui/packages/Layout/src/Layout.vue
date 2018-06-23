@@ -25,9 +25,9 @@ export default class Layout extends Vue {
       } else if (screen.width >= 992 && screen.width < 1200) {
         self.viewHeight = 800
       } else if (screen.width >= 1200 && screen.width < 1600) {
-        self.viewHeight = 1000
+        self.viewHeight = 1024
       } else if (screen.width > 1600) {
-        self.viewHeight = 1000
+        self.viewHeight = 1024
       }
     }
   }

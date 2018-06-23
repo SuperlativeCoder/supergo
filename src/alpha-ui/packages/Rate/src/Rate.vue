@@ -27,8 +27,8 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { Component, Prop } from 'vue-property-decorator';
-import Utils from '@/alpha-ui/utils/Utils';
+import { Component, Prop } from 'vue-property-decorator'
+import Utils from '@/alpha-ui/utils/Utils'
 
 @Component
 export default class Rate extends Vue {

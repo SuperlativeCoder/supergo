@@ -17,9 +17,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Component, Prop, Watch } from 'vue-property-decorator';
-import Utils from '@/alpha-ui/utils/Utils';
-import { clearTimeout, setTimeout } from 'timers';
+import { Component, Prop, Watch } from 'vue-property-decorator'
+import Utils from '@/alpha-ui/utils/Utils'
+import { clearTimeout, setTimeout } from 'timers'
 
 @Component
 export default class Message extends Vue {
@@ -45,7 +45,7 @@ export default class Message extends Vue {
   close() {
     this.closed = true
     if (typeof this.onClose === 'function') {
-      this.onClose(this);
+      this.onClose((this as any).id);
     }
   }
 
@@ -75,11 +75,11 @@ export default class Message extends Vue {
 
   get icons() {
     switch(this.type) {
-      case 'success': return 'checkmark-circled';
-      case 'info': return 'information-circled';
-      case 'warning': return 'android-warning';
-      case 'error': return 'close-circled';
-      default: return 'information-circled';
+      case 'success': return 'checkmark-circled'
+      case 'info': return 'information-circled'
+      case 'warning': return 'android-warning'
+      case 'error': return 'close-circled'
+      default: return 'information-circled'
     }
   }
 

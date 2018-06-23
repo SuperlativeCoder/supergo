@@ -1,11 +1,14 @@
-<p align="center">
-    <img src="./assets/logo.png"/>
-</p>
-
 ## Description
-hubot for slack
+基于vue2+koa2的前后端同构模板项目  
+🤨**傻大黑粗**🌚
 
 ## Features
+* build工具
+* 组件库&文档集成
+* koa2中台
+* 完整支持typescript&tslint
+* hubot集成
+* devOps封装  
 
 ## Warning
 **Token is any more useless where in supergo.config.json,Please use your own 🤪**
@@ -19,17 +22,25 @@ hubot for slack
 |-- docs                    // 文档
 |-- scripts                 // 注册入口
 |-- public
-|-- src       
-    |-- include             // Hubot-Server Kit
-    |-- locale              // 国际化
+|-- src      
+    |-- alpha-charts        // 可视化相关
+    |-- alpha-motion        // 动画交互
+    |-- alpha-ui            // 后台组件
+    |-- include             // SDK Kit
     |-- scripts             // Hubot
-        |-- base                // 封装
-        |-- handler             // 执行入口
-        |-- interval            // 定时器
-        |-- listener            // 路由监听
-        |-- service             // 服务
-    |-- server              // 管理后台
-    |-- view                // 管理后台 UI
+        |-- base            // 封装
+        |-- handler         // 执行入口
+        |-- interval        // 定时器
+        |-- listener        // 路由监听
+        |-- service         // 服务
+    |-- server              // 管理中台
+    |-- client              // 管理后台 UI
+        |-- assets          // 资源
+        |-- components      // 业务组件
+        |-- config          // 项目配置
+        |-- directive       // 自定义指令集
+        |-- views           // 界面
+        |-- main.ts         // vue 入口
 |-- test                    // 测试
 |-- typings                 // *.d.ts
 |-- Dockerfile                    
@@ -47,6 +58,10 @@ hubot for slack
 **development server**
 ```shell
     yarn run dev
+```
+**doc server**
+```shell
+    yarn run dev:docs
 ```
 
 ## Config

@@ -46,23 +46,23 @@
 
   @include nest(type) {
     @include impl(success) {
-      color: $--color-success;
-      background-color: $--color-alert-success;
+      color: #67c23a;
+      background-color: #f0f9eb;
     }
 
     @include impl(info) {
-      color: $--color-info;
-      background-color: $--color-alert-info;
+      color: #909399;
+      background-color: #f4f4f5;
     }
 
     @include impl(warning) {
-      color: $--color-warning;
-      background-color: $--color-alert-warning;
+      color: #e6a23c;
+      background-color: #fdf6ec;
     }
 
     @include impl(error) {
-      color: $--color-error;
-      background-color: $--color-alert-error;
+      color: #f56c6c;
+      background-color: #fef0f0;
     }
   }
 }

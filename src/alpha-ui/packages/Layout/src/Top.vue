@@ -17,13 +17,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import { Prop } from 'vue-property-decorator';
+import { Prop } from 'vue-property-decorator'
 
 @Component
 export default class Top extends Vue{
   @Prop({ type: String, default: '0.0.0'})
   version: string | undefined
-  @Prop({ type: [String, Number], default: '0'})
+  @Prop({ type: [String, Number]})
   star: string | number | undefined
 }
 </script>

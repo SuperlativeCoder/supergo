@@ -12,8 +12,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import Utils from '../../../utils/Utils'
-import { Component, Prop } from 'vue-property-decorator';
-import { EventEmitter } from 'events';
+import { Component, Prop } from 'vue-property-decorator'
+import { EventEmitter } from 'events'
 
 @Component
 export default class Button extends Vue {

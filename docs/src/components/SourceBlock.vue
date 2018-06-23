@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Component } from 'vue-property-decorator';
+import { Component } from 'vue-property-decorator'
 
 @Component
 export default class SourceBlock extends Vue {
@@ -44,7 +44,7 @@ export default class SourceBlock extends Vue {
   .source_block {
     width: 90%;
     margin: auto;
-    min-height: 90px;
+    height: auto;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     margin-top: 10px;
     margin-bottom: 10px;

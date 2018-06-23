@@ -28,7 +28,7 @@
 @mixin impl($state) {
   @at-root {
     &-#{$state} {
-        @content;
+      @content;
     }
   }
 }

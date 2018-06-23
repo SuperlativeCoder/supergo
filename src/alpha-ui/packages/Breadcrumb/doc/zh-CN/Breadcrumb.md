@@ -30,9 +30,9 @@
 :::demo
 ```html
 <vs-Breadcrumb>
-    <vs-BreadcrumbItem icon="home" href="#">一级导航</vs-BreadcrumbItem>
-    <vs-BreadcrumbItem href="#">二级导航</vs-BreadcrumbItem>
-    <vs-BreadcrumbItem href="#">三级导航</vs-BreadcrumbItem>
+    <vs-BreadcrumbItem icon="home" :to="{ path: '#' }">一级导航</vs-BreadcrumbItem>
+    <vs-BreadcrumbItem :to="{ path: '#' }">二级导航</vs-BreadcrumbItem>
+    <vs-BreadcrumbItem :to="{ path: '#' }">三级导航</vs-BreadcrumbItem>
 </vs-Breadcrumb>
 ```
 :::
@@ -41,9 +41,9 @@
 :::demo
 ```html
 <vs-Breadcrumb separator=">">
-    <vs-BreadcrumbItem icon="home" href="#">一级导航</vs-BreadcrumbItem>
-    <vs-BreadcrumbItem href="#">二级导航</vs-BreadcrumbItem>
-    <vs-BreadcrumbItem href="#">三级导航</vs-BreadcrumbItem>
+    <vs-BreadcrumbItem icon="home" :to="{ path: '#' }">一级导航</vs-BreadcrumbItem>
+    <vs-BreadcrumbItem :to="{ path: '#' }">二级导航</vs-BreadcrumbItem>
+    <vs-BreadcrumbItem :to="{ path: '#' }">三级导航</vs-BreadcrumbItem>
 </vs-Breadcrumb>
 ```
 :::

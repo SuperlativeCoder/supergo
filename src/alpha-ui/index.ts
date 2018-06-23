@@ -1,4 +1,4 @@
-import Vue, { PluginObject, PluginFunction } from 'vue'
+import { PluginObject, PluginFunction } from 'vue'
 import Icon from '@/alpha-ui/packages/Icon'
 import Sider from '@/alpha-ui/packages/Sider'
 import Avatar from '@/alpha-ui/packages/Avatar'
@@ -16,6 +16,13 @@ import Notify from '@/alpha-ui/packages/Notify'
 import Message from '@/alpha-ui/packages/Message'
 import { Breadcrumb, BreadcrumbItem } from '@/alpha-ui/packages/Breadcrumb'
 import Tag from '@/alpha-ui/packages/Tag'
+import Pagination from '@/alpha-ui/packages/Pagination'
+import { Menu, SubMenu, MenuItem, MenuGroup } from '@/alpha-ui/packages/Menu'
+import Loading from '@/alpha-ui/packages/Loading'
+import Lottie from '@/alpha-ui/packages/Lottie'
+import { TabPane, Tabs } from '@/alpha-ui/packages/Tabs'
+import { Form, FormItem } from '@/alpha-ui/packages/Form'
+
 // 组件
 const components: any[] = [
   Icon,
@@ -28,9 +35,14 @@ const components: any[] = [
   Button, ButtonGroup,
   Images,
   Table, TableHeader, TableBody, TableRow, TableItem,
-  Alert, Notify,
+  Alert,
   Breadcrumb, BreadcrumbItem,
   Tag,
+  Pagination,
+  Menu, SubMenu, MenuItem, MenuGroup,
+  Loading, Lottie,
+  TabPane, Tabs,
+  Form, FormItem,
 ]
 
 // 过滤器
@@ -48,7 +60,6 @@ class Alphaui implements PluginObject<any> {
     filters.map(filter => {
       vue.filter('vs-' + filter.name, filter)
     })
-
     vue.prototype.$message = Message
     vue.prototype.$notify = Notify
   }

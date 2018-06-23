@@ -1,6 +1,6 @@
 <template>
   <div class="vs-form">
-      <slot></slot>
+    <slot></slot>
   </div>
 </template>
 
@@ -13,4 +13,3 @@ export default class Form extends Vue {
 
 }
 </script>
-
