@@ -3,15 +3,16 @@
 🤨**傻大黑粗**🌚
 
 ## Features
-* build工具
+* cli 工具(初步支持插件化)
 * 组件库&文档集成
-* koa2中台
-* 完整支持typescript&tslint
+* "面向对象"-SASS 封装
+* koa2 中台代理
+* 完整支持 typescript & tslint
 * hubot集成
 * devOps封装  
 
 ## Warning
-**Token is any more useless where in supergo.config.json,Please use your own 🤪**
+**Slack Hubot Token is any more useless where in supergo.config.json,Please use your own 🤪**
 
 ## Mapping
 ```js
