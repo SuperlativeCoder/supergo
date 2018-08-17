@@ -27,7 +27,7 @@ module.exports = merge(baseConfig, {
     path: resolve('./dist/docs/'),
     filename: 'static/js/[name].[hash:7].js',
     chunkFilename: 'static/js/[id].[hash:7].js',
-    publicPath: '/supergo'
+    publicPath: '/supergo/'
   },
   plugins: [
     new ExtractTextPlugin({

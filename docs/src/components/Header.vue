@@ -1,5 +1,5 @@
 <template>
-  <vs-Header :name="name" style="margin-bottom: 5px;"></vs-Header>
+  <vs-Header :title="name" style="margin-bottom: 5px;"></vs-Header>
 </template>
 
 <script lang="ts">
