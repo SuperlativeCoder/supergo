@@ -76,7 +76,7 @@
   !*** ./docs/src/components/Footer.vue + 1 modules ***!
   \****************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36024,7 +36024,7 @@ exports.mixins = mixins;
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./docs/src/views/welcome.md + 1 modules ***!
   \*****************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37447,7 +37447,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Alert/doc/zh-CN/Alert.md + 1 modules ***!
   \**************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38191,7 +38191,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Avatar/doc/zh-CN/Avatar.md + 1 modules ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38386,7 +38386,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Breadcrumb/doc/zh-CN/Breadcrumb.md + 1 modules ***!
   \************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38969,7 +38969,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Button/doc/zh-CN/Button.md + 1 modules ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40342,7 +40342,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Card/doc/zh-CN/Card.md + 1 modules ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40638,7 +40638,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Checkbox/doc/zh-CN/Checkbox.md + 1 modules ***!
   \********************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40696,7 +40696,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/DatePicker/doc/zh-CN/DatePicker.md + 1 modules ***!
   \************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40754,7 +40754,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Form/doc/zh-CN/Form.md + 1 modules ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41010,7 +41010,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Grid/doc/zh-CN/Grid.md + 1 modules ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43202,7 +43202,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Icon/doc/zh-CN/Icon.md + 2 modules ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43496,7 +43496,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Image/doc/zh-CN/Image.md + 1 modules ***!
   \**************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43770,7 +43770,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Import/doc/zh-CN/Import.md + 1 modules ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43828,7 +43828,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Input/doc/zh-CN/Input.md + 1 modules ***!
   \**************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44112,7 +44112,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/InputNumber/doc/zh-CN/InputNumber.md + 1 modules ***!
   \**************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44170,7 +44170,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Loading/doc/zh-CN/Loading.md + 1 modules ***!
   \******************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44354,7 +44354,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Lottie/doc/zh-CN/Lottie.md + 2 modules ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /*! ModuleConcatenation bailout: Cannot concat with ./src/alpha-ui/packages/Lottie/doc/assets/pinjump.json (<- Module is not an ECMAScript module) */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -45029,7 +45029,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Menu/doc/zh-CN/Menu.md + 1 modules ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46291,7 +46291,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Message/doc/zh-CN/Message.md + 2 modules ***!
   \******************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46693,7 +46693,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Notify/doc/zh-CN/Notify.md + 2 modules ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47097,7 +47097,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Pagination/doc/zh-CN/Pagination.md + 2 modules ***!
   \************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48030,7 +48030,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Popover/doc/zh-CN/Popover.md + 1 modules ***!
   \******************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48088,7 +48088,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Radio/doc/zh-CN/Radio.md + 1 modules ***!
   \**************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48146,7 +48146,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Rate/doc/zh-CN/Rate.md + 1 modules ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48204,7 +48204,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Select/doc/zh-CN/Select.md + 1 modules ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48262,7 +48262,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Step/doc/zh-CN/Step.md + 1 modules ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48320,7 +48320,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Switch/doc/zh-CN/Switch.md + 1 modules ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48378,7 +48378,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Table/doc/zh-CN/Table.md + 1 modules ***!
   \**************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48641,7 +48641,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Tabs/doc/zh-CN/Tabs.md + 1 modules ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48699,7 +48699,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Tag/doc/zh-CN/Tag.md + 1 modules ***!
   \**********************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49527,7 +49527,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/TimePicker/doc/zh-CN/TimePicker.md + 1 modules ***!
   \************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49585,7 +49585,7 @@ if (false) {}
   !*** ./node_modules/vue-loader!./node_modules/vue-markdown-loader/lib/markdown-compiler.js?raw!./src/alpha-ui/packages/Upload/doc/zh-CN/Upload.md + 1 modules ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/views/App.vue */
+/*! ModuleConcatenation bailout: Cannot concat with ./node_modules/vue-loader/lib/runtime/component-normalizer.js because of ./docs/src/components/SourceBlock.vue */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

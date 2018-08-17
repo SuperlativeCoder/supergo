@@ -98,17 +98,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-weight: bold;
 }
 
-body {
-  min-width: 1300px;
-}
-.fade-enter-active, .fade-leave-active {
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-
 ul[data-v-3e9c63a3] {
   padding-left: 20px;
 }
@@ -128,6 +117,17 @@ ul li a[data-v-3e9c63a3]:hover {
 }
 ul li a[data-v-3e9c63a3]:active {
     color: #1abc9c;
+}
+
+body {
+  min-width: 1300px;
+}
+.fade-enter-active, .fade-leave-active {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
 .source_block[data-v-56fc894c] {
