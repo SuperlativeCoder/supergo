@@ -78,7 +78,8 @@ module.exports = class Service {
       './commands/serve',
       './commands/build',
       './commands/decrypt',
-      './commands/encrypt'
+      './commands/encrypt',
+      './commands/publish'
     ].map(idToPlugin)
     if (inlinePlugins) {
       return useBuiltIn !== false
